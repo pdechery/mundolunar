@@ -1,0 +1,126 @@
+/**	
+ * Mundo Lunar
+ * 
+ * Estilos Novo Blog
+ * 
+ * Novembro 2021 ~ Pierre Dechery
+ * 
+ */
+
+.type() {
+	font-size: 16px;
+	font-family: 'Merriweather', serif;
+	line-height: 1.2em;
+	font-weight: 300;
+	color: #000;
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	background: #000;
+	font-family: 'Deja Vu Sans', sans-serif;
+	.type();
+}
+
+.overlay-cell() {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.35;
+}
+
+#main {
+	width: 942px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding-top: 20px;
+	.cell {
+		position: relative;
+		width: 300px;
+		height: 300px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		color: #fff;
+		a {
+			text-decoration: none;
+			color: #fff;
+		}
+		h2 {
+			font-size:  1.8em;
+			font-weight: 300;
+			margin: 0 0 30px 30px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+#main .no-margin {
+	margin:  0 0 0 0;
+}
+
+// CONTEÚDO
+
+section.content {
+	display: none;
+	background-color: #a5a5a5;
+	padding: 20px 80px 40px 40px;
+	margin-bottom: 20px;
+	color:  #000;
+	width:  100%;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	h3 {
+		font-weight: 300;
+	}
+	&.index {
+		background-color: #030822;
+		color: #fff;
+	}
+	&.sobre {
+		background-color: #254308;
+	}
+	&.song {
+		background-color: #a39a37;
+		color: #fff;
+	}
+}
+
+// CÉLULAS
+
+#main .cell:nth-of-type(1),
+#main .cell:nth-of-type(3),
+#main .cell:nth-of-type(5) {
+	&:before {
+		.overlay-cell();
+	}
+	background-color: #222;
+	//background: url('../img/foto-com-guitarra.png') 0 0 no-repeat;
+	background-size: cover;
+}
+.cell:nth-of-type(2) {
+	background: url('../img/bg-cell-0-1.png');
+}
+.cell:nth-of-type(4) {
+	background: url('../img/bg-cell-1-0.png');
+}
+.cell:nth-of-type(6) {
+	background: url('../img/bg-cell-1-2.png');
+}
+.cell:nth-of-type(7) {
+	background: url('../img/bg-cell-2-0.png');
+}
+.cell:nth-of-type(8) {
+	background: url('../img/bg-cell-2-1.png');
+}
+.cell:nth-of-type(9) {
+	background: url('../img/bg-cell-2-2.png');
+}

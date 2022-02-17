@@ -1,0 +1,1185 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"contentAll"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"f",
+				"forEach"
+			],
+			[
+				"off",
+				"offset"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"co",
+				"cover"
+			],
+			[
+				"b",
+				"block"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"background-",
+				"background-position"
+			],
+			[
+				"backg",
+				"background-size"
+			],
+			[
+				"e",
+				"edit_url"
+			],
+			[
+				"id",
+				"tileId"
+			],
+			[
+				"t",
+				"tileId"
+			],
+			[
+				"form",
+				"formData"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "mundolunar/settings/base.py",
+			"settings":
+			{
+				"buffer_size": 4638,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAALMCAAAAAAAAtAIAAAAAAAAAAAAAtAIAAAAAAAC1AgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAswIAAAAAAACzAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"insert_snippet",
+					{
+						"contents": "'$0'"
+					},
+					"AQAAALUCAAAAAAAAtwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtQIAAAAAAAC1AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					5,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Delete Left Right.sublime-macro"
+					},
+					"AgAAALUCAAAAAAAAtQIAAAAAAAABAAAAJ7UCAAAAAAAAtQIAAAAAAAABAAAAJw",
+					"AQAAAAAAAAABAAAAtgIAAAAAAAC2AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"reindent",
+					null,
+					"AQAAALUCAAAAAAAAuQIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtQIAAAAAAAC1AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"insert_snippet",
+					{
+						"contents": "'$0'"
+					},
+					"AQAAALkCAAAAAAAAuwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuQIAAAAAAAC5AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "blog"
+					},
+					"BAAAALoCAAAAAAAAuwIAAAAAAAAAAAAAuwIAAAAAAAC8AgAAAAAAAAAAAAC8AgAAAAAAAL0CAAAAAAAAAAAAAL0CAAAAAAAAvgIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAugIAAAAAAAC6AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAL8CAAAAAAAAwAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvwIAAAAAAAC/AgAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "blog/models.py",
+			"settings":
+			{
+				"buffer_size": 1334,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": "blog"
+					},
+					"BQAAAIMCAAAAAAAAhAIAAAAAAAAAAAAAhAIAAAAAAACEAgAAAAAAAAQAAABob21lhAIAAAAAAACFAgAAAAAAAAAAAACFAgAAAAAAAIYCAAAAAAAAAAAAAIYCAAAAAAAAhwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgwIAAAAAAACHAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIcCAAAAAAAAhwIAAAAAAAAGAAAAL2hvbWUu",
+					"AQAAAAAAAAABAAAAhwIAAAAAAACNAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					28,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAIcCAAAAAAAAiAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhwIAAAAAAACHAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					36,
+					1,
+					"insert",
+					{
+						"characters": "#"
+					},
+					"AQAAAHcCAAAAAAAAeAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdwIAAAAAAAB3AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"left_delete",
+					null,
+					"AQAAAHECAAAAAAAAcQIAAAAAAAAdAAAACgogICAgI3RlbXBsYXRlID0gJ2Jsb2cuaHRtbCc",
+					"AQAAAAAAAAABAAAAjgIAAAAAAABxAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					42,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAAHECAAAAAAAAcgIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcQIAAAAAAABxAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					49,
+					1,
+					"insert",
+					{
+						"characters": "Posts"
+					},
+					"BgAAAHYCAAAAAAAAdwIAAAAAAAAAAAAAdwIAAAAAAAB3AgAAAAAAAAgAAABNw7pzaWNhc3cCAAAAAAAAeAIAAAAAAAAAAAAAeAIAAAAAAAB5AgAAAAAAAAAAAAB5AgAAAAAAAHoCAAAAAAAAAAAAAHoCAAAAAAAAewIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgIAAAAAAAB9AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					54,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AwAAAGkEAAAAAAAAagQAAAAAAAAAAAAAagQAAAAAAABuBAAAAAAAAAAAAABuBAAAAAAAAHIEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQQAAAAAAABpBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					55,
+					3,
+					"left_delete",
+					null,
+					"AwAAAG4EAAAAAAAAbgQAAAAAAAAEAAAAICAgIGoEAAAAAAAAagQAAAAAAAAEAAAAICAgIGkEAAAAAAAAaQQAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAcgQAAAAAAAByBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					60,
+					1,
+					"insert",
+					{
+						"characters": "\nprint"
+					},
+					"CAAAAGkEAAAAAAAAagQAAAAAAAAAAAAAagQAAAAAAABuBAAAAAAAAAAAAABuBAAAAAAAAHIEAAAAAAAAAAAAAHIEAAAAAAAAcwQAAAAAAAAAAAAAcwQAAAAAAAB0BAAAAAAAAAAAAAB0BAAAAAAAAHUEAAAAAAAAAAAAAHUEAAAAAAAAdgQAAAAAAAAAAAAAdgQAAAAAAAB3BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQQAAAAAAABpBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					61,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAHcEAAAAAAAAeQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdwQAAAAAAAB3BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					62,
+					1,
+					"insert",
+					{
+						"characters": "request"
+					},
+					"BwAAAHgEAAAAAAAAeQQAAAAAAAAAAAAAeQQAAAAAAAB6BAAAAAAAAAAAAAB6BAAAAAAAAHsEAAAAAAAAAAAAAHsEAAAAAAAAfAQAAAAAAAAAAAAAfAQAAAAAAAB9BAAAAAAAAAAAAAB9BAAAAAAAAH4EAAAAAAAAAAAAAH4EAAAAAAAAfwQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeAQAAAAAAAB4BAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					72,
+					1,
+					"left_delete",
+					null,
+					"AQAAAHECAAAAAAAAcQIAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAcgIAAAAAAAByAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					77,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAKMAAAAAAAAApAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAowAAAAAAAACjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					78,
+					1,
+					"paste",
+					null,
+					"AQAAAKQAAAAAAAAAyAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApAAAAAAAAACkAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					89,
+					1,
+					"insert",
+					{
+						"characters": "dir("
+					},
+					"BAAAAJwEAAAAAAAAnQQAAAAAAAAAAAAAnQQAAAAAAACeBAAAAAAAAAAAAACeBAAAAAAAAJ8EAAAAAAAAAAAAAJ8EAAAAAAAAoAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnAQAAAAAAACcBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					92,
+					1,
+					"insert",
+					{
+						"characters": ")"
+					},
+					"AQAAAKgEAAAAAAAAqQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqAQAAAAAAACoBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"insert",
+					{
+						"characters": "dict"
+					},
+					"BQAAAJwEAAAAAAAAnQQAAAAAAAAAAAAAnQQAAAAAAACdBAAAAAAAAAMAAABkaXKdBAAAAAAAAJ4EAAAAAAAAAAAAAJ4EAAAAAAAAnwQAAAAAAAAAAAAAnwQAAAAAAACgBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnAQAAAAAAACfBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					102,
+					1,
+					"cut",
+					null,
+					"AQAAAKEEAAAAAAAAoQQAAAAAAAAHAAAAcmVxdWVzdA",
+					"AQAAAAAAAAABAAAAoQQAAAAAAACoBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					105,
+					1,
+					"paste",
+					null,
+					"AgAAAJwEAAAAAAAAowQAAAAAAAAAAAAAowQAAAAAAACjBAAAAAAAAAYAAABkaWN0KCk",
+					"AQAAAAAAAAABAAAAnAQAAAAAAACiBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					106,
+					1,
+					"insert",
+					{
+						"characters": ".__"
+					},
+					"AwAAAKMEAAAAAAAApAQAAAAAAAAAAAAApAQAAAAAAAClBAAAAAAAAAAAAAClBAAAAAAAAKYEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAowQAAAAAAACjBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					107,
+					1,
+					"insert",
+					{
+						"characters": "dic"
+					},
+					"AwAAAKYEAAAAAAAApwQAAAAAAAAAAAAApwQAAAAAAACoBAAAAAAAAAAAAACoBAAAAAAAAKkEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApgQAAAAAAACmBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					108,
+					1,
+					"insert_completion",
+					{
+						"completion": "__dict__",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "__dict__"
+					},
+					"AgAAAKQEAAAAAAAApAQAAAAAAAAFAAAAX19kaWOkBAAAAAAAAKwEAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqQQAAAAAAACpBAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "blog/templates/blog/home_page.html",
+			"settings":
+			{
+				"buffer_size": 2342,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mundolunar/templates/base.html",
+			"settings":
+			{
+				"buffer_size": 1347,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": "\nHAHAHAHAHAHA"
+					},
+					"DwAAAN8DAAAAAAAA4AMAAAAAAAAAAAAA4AMAAAAAAADkAwAAAAAAAAAAAADkAwAAAAAAAOgDAAAAAAAAAAAAAOgDAAAAAAAA6QMAAAAAAAAAAAAA6QMAAAAAAADqAwAAAAAAAAAAAADqAwAAAAAAAOsDAAAAAAAAAAAAAOsDAAAAAAAA7AMAAAAAAAAAAAAA7AMAAAAAAADtAwAAAAAAAAAAAADtAwAAAAAAAO4DAAAAAAAAAAAAAO4DAAAAAAAA7wMAAAAAAAAAAAAA7wMAAAAAAADwAwAAAAAAAAAAAADwAwAAAAAAAPEDAAAAAAAAAAAAAPEDAAAAAAAA8gMAAAAAAAAAAAAA8gMAAAAAAADzAwAAAAAAAAAAAADzAwAAAAAAAPQDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3wMAAAAAAADfAwAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "mundolunar/templates/blog.html",
+			"settings":
+			{
+				"buffer_size": 2342,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/pdechery/Dev/mundolunar"
+	],
+	"file_history":
+	[
+		"/home/pdechery/Dev/mundolunar/mundolunar/urls.py",
+		"/home/pdechery/Dev/mundolunar/site/models.py",
+		"/home/pdechery/Dev/mundolunar/mundolunar/settings/base.py",
+		"/home/pdechery/Dev/mundolunar/site_old/models.py",
+		"/home/pdechery/Dev/mundolunar/blog/models.py",
+		"/home/pdechery/Dev/mundolunar/site/templates/site/home.html",
+		"/home/pdechery/Dev/mundolunar/db.sqlite3",
+		"/home/pdechery/Dev/mundolunar/site/migrations/__init__.py",
+		"/home/pdechery/Dev/mundolunar/mundolunar/settings/dev.py",
+		"/home/pdechery/Dev/mundolunar/requirements.txt",
+		"/home/pdechery/Dev/mundolunar/mundolunar/home/models.py",
+		"/home/pdechery/Dev/mundolunar/mundolunar/home/templates/home/home.html",
+		"/home/pdechery/Dev/mundolunar/mundolunar/mundolunar/urls.py",
+		"/home/pdechery/Dev/mundolunar/mundolunar/mundolunar/settings/dev.py",
+		"/home/pdechery/Dev/mundolunar/mundolunar/home/templates/home/blog_page.html",
+		"/home/pdechery/Dev/mundolunar/mundolunar/home/templates/home/home_page.html",
+		"/home/pdechery/Dev/mundolunar/mundolunar/home/templates/home/welcome_page.html",
+		"/home/pdechery/Dev/mundolunar/index.html",
+		"/home/pdechery/Dev/mundolunar/mundolunar/mundolunar/settings/base.py",
+		"/home/pdechery/Dev/mundolunar/mundolunar/mundolunar/templates/_home.html",
+		"/home/pdechery/Dev/mundolunar/mundolunar/mundolunar/templates/base.html",
+		"/home/pdechery/Dev/mundolunar/mundolunar/mundolunar/wsgi.py",
+		"/home/pdechery/Dev/mundolunar/mundolunar/manage.py",
+		"/home/pdechery/Dev/mundolunar/static/build/less/main.less",
+		"/home/pdechery/Dev/mundolunar/static/js/main.js",
+		"/home/pdechery/Dev/scripts/touchpad.sh",
+		"/home/pdechery/Dev/mundolunar/song.html",
+		"/home/pdechery/Dev/mundolunar/interna2.html",
+		"/home/pdechery/Dev/mundolunar/interna.html",
+		"/home/pdechery/Dev/mundolunar/package.json",
+		"/home/pdechery/Dev/mundolunar/package-lock.json",
+		"/home/pdechery/Dev/teste-hackerrank.js",
+		"/home/pdechery/Dev/mundolunar/interna-2.html",
+		"/home/pdechery/Dev/teste-jquery-ui.html",
+		"/home/pdechery/Dev/codebuddy/central/templates/administracao/base.html",
+		"/home/pdechery/Dev/mundolunar/static/css/style.css",
+		"/home/pdechery/Dev/codebuddy/CBCentral/settings.py",
+		"/home/pdechery/Dev/codebuddy/central/views/ValidarViews.py",
+		"/home/pdechery/Dev/codebuddy/CBCentral/settings_base.py",
+		"/home/pdechery/Dev/codebuddy/learn/models/Fase.py",
+		"/home/pdechery/Dev/codebuddy/learn/templates/fase/fase.html",
+		"/home/pdechery/Dev/codebuddy/_docker/.env",
+		"/home/pdechery/Dev/codebuddy/_docker/django/Dockerfile-v2",
+		"/home/pdechery/Dev/codebuddy/central/urls/MainURL.py",
+		"/home/pdechery/Dev/codebuddy/central/views/ConteudoViews.py",
+		"/home/pdechery/Dev/codebuddy/central/migrations/0029_auto_20210302_0742.py",
+		"/home/pdechery/Dev/codebuddy/central/migrations/0030_relatorio_desempenho_aluno.py",
+		"/home/pdechery/Dev/codebuddy/central/migrations/0031_bloqueiolicenca.py",
+		"/home/pdechery/Dev/codebuddy/learn/migrations/0029_auto_20211005_1349.py",
+		"/home/pdechery/Dev/codebuddy/learn/migrations/0028_subtopico_background_img.py",
+		"/home/pdechery/Dev/codebuddy/learn/migrations/0027_auto_20210930_2045.py",
+		"/home/pdechery/Dev/codebuddy/learn/migrations/0026_auto_20210917_1142.py",
+		"/home/pdechery/Dev/codebuddy/central/migrations/0032_nivel_itens_liberar.py",
+		"/home/pdechery/Dev/codebuddy/central/migrations/0028_auto_20210225_2014.py",
+		"/home/pdechery/Dev/codebuddy/learn/templates/hub/lead/hub-lead.html",
+		"/home/pdechery/Dev/codebuddy/_docker/nginx/conf.d/local.conf",
+		"/home/pdechery/Dev/codebuddy/.dockerignore",
+		"/home/pdechery/Dev/codebuddy/_docker/README.MD",
+		"/home/pdechery/Dev/codebuddy/_docker/docker_compose.dev.yml",
+		"/home/pdechery/Dev/codebuddy/requirements.txt",
+		"/home/pdechery/Dev/codebuddy/_docker/entrypoint.sh",
+		"/home/pdechery/Dev/codebuddy/_docker/docker_compose.yml",
+		"/home/pdechery/Dev/codebuddy/_docker/django/Dockerfile",
+		"/home/pdechery/Dev/codebuddy/_docker/nginx/Dockerfile",
+		"/home/pdechery/Dev/codebuddy/_docker/run_image_basic.sh",
+		"/home/pdechery/Dev/codebuddy/learn/urls.py",
+		"/home/pdechery/Dev/codebuddy/README.md",
+		"/home/pdechery/Dev/codebuddy/.gitignore",
+		"/home/pdechery/Dev/codebuddy/run.sh",
+		"/home/pdechery/Dev/codebuddy/CBCentral/wsgi.py",
+		"/home/pdechery/Dev/codebuddy/helper-docker.txt",
+		"/home/pdechery/Dev/codebuddy/learn/static/_vendor/shepherd.css",
+		"/home/pdechery/Dev/codebuddy/.env",
+		"/home/pdechery/Dev/codebuddy/docker_compose.yml",
+		"/home/pdechery/Dev/codebuddy/_docker/nginx/nginx.conf",
+		"/home/pdechery/Dev/codebuddy/learn/templates/lead-nav-bar.html",
+		"/home/pdechery/Dev/codebuddy/learn/templates/essenciais/lead-modal.html",
+		"/home/pdechery/Dev/codebuddy/learn/static/js/lead/onboarding.js",
+		"/home/pdechery/Dev/codebuddy/learn/templates/new-base.html",
+		"/home/pdechery/Dev/codebuddy/learn/node_modules/shepherd.js/dist/css/shepherd.css",
+		"/home/pdechery/Dev/codebuddy/learn/templates/hub/new-hub.html",
+		"/home/pdechery/Dev/codebuddy/learn/templates/leads/mapa-lead.html",
+		"/home/pdechery/Dev/codebuddy/learn/templates/base-lead.html",
+		"/home/pdechery/Dev/codebuddy/learn/static/js/hub/new-hub.js",
+		"/home/pdechery/Dev/codebuddy/learn/node_modules/shepherd.js/dist/js/shepherd.min.js",
+		"/home/pdechery/Dev/codebuddy/central/jobs.py",
+		"/home/pdechery/Dev/codebuddy/learn/package.json",
+		"/home/pdechery/Dev/codebuddy/central/views/ErroViews.py",
+		"/home/pdechery/Dev/codebuddy/_docker/Dockerfile",
+		"/home/pdechery/Dev/codebuddy/run.shdocker",
+		"/home/pdechery/Dev/codebuddy/learn/views/Lead.py",
+		"/home/pdechery/Dev/codebuddy/learn/templates/fase/games/blockly.html",
+		"/home/pdechery/Dev/codebuddy/learn/templates/blockly/eggs.html",
+		"/home/pdechery/Dev/codebuddy/learn/static/js/p5js/blockly/BlocklyMain.js",
+		"/home/pdechery/Dev/codebuddy/learn/static/js/p5js/blockly/interpretador.js",
+		"/home/pdechery/Dev/codebuddy/learn/templates/fase/conteudo.html",
+		"/home/pdechery/Dev/codebuddy/static/js/p5js/blockly/botoes/blocos.js",
+		"/home/pdechery/Dev/codebuddy/static/js/p5js/blockly/toolbox.js",
+		"/home/pdechery/Dev/codebuddy/learn/templates/leads/fase/games/blockly.html",
+		"/home/pdechery/Dev/codebuddy/learn/static/js/p5js/blockly/Eggs.js",
+		"/home/pdechery/Dev/codebuddy/learn/static/js/p5js/blockly/Personagem.js",
+		"/home/pdechery/Dev/codebuddy/learn/static/js/p5js/blockly/blockly-fase.js",
+		"/home/pdechery/Dev/codebuddy/static/js/p5js/blockly/BlocklyMain.js",
+		"/home/pdechery/Dev/codebuddy/learn/static/js/p5js/Fase/Info.js",
+		"/home/pdechery/Dev/codebuddy/static/js/p5js/blockly/Eggs.js",
+		"/home/pdechery/Dev/codebuddy/central/templates/administracao/pedagogico/conteudo/editar/editar-blockly.html",
+		"/home/pdechery/Dev/codebuddy/central/templates/administracao/pedagogico/conteudo/listar/listar-tiles.html",
+		"/home/pdechery/Dev/learn_tile_data.csv"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 107.0,
+		"where_history":
+		[
+			"/home/pdechery/Dev/mundolunar,<project filters>",
+			"/home/pdechery/Dev/codebuddy/central,<project filters>",
+			"/home/pdechery/Dev/codebuddy/learn,<project filters>",
+			"/home/pdechery/Dev/codebuddy/central/templates",
+			"/home/pdechery/Dev/codebuddy/central,<project filters>",
+			"<open files>",
+			"/home/pdechery/Dev/codebuddy/learn/static/js,<project filters>",
+			"/home/pdechery/Dev/codebuddy/learn/static/js/p5js/blockly,<project filters>",
+			"/home/pdechery/Dev/codebuddy/learn/static/js/p5js/blockly/botoes,<project filters>",
+			"/home/pdechery/Dev/codebuddy/learn/static/js/p5js,<project filters>",
+			"/home/pdechery/Dev/codebuddy/learn/models,<project filters>",
+			"/home/pdechery/Dev/codebuddy/learn/static/js/p5js/blockly,<project filters>",
+			"/home/pdechery/Dev/codebuddy/learn/static/js,<project filters>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"site",
+			"search",
+			"songdestaque",
+			"ong-destaque",
+			"search",
+			"contentOffsetTop",
+			"song.html",
+			"text",
+			"Trackpad",
+			"13",
+			" style=\"opacity: 1\"",
+			"style=\"opacity: 1",
+			"nth-child",
+			"acesso_deus",
+			"environ",
+			"DEBUG",
+			"INTERNAL",
+			"socket",
+			"DEBUG_TOOLBAR_CONFIG",
+			"nginx_network",
+			" \n",
+			"modalChoose",
+			"STATICFILES_DIRS",
+			"DEFAULT_AUTO_FIELD",
+			"PASSO_PASSO",
+			"PARADO",
+			"strong",
+			"PARADO",
+			"PASSO_PASSO",
+			"completou_objetivos",
+			"print",
+			"EXECUTAR",
+			"PARADO",
+			"pode_executar",
+			"runCode",
+			"btn-success",
+			"EXECUTAR",
+			"draw",
+			"pode_executar",
+			"modo",
+			"setup",
+			"personagem",
+			"botaoexecuta",
+			"terreno",
+			"mapa",
+			"salvarAleatorio",
+			"let",
+			"droppable",
+			"S ",
+			"V ",
+			"E ",
+			"P ",
+			"P",
+			"F ",
+			"lista_terrenos",
+			",2",
+			",1",
+			"button",
+			"eaiqualvaiser",
+			"editar-tile",
+			"url",
+			"is_hidden",
+			"tile_",
+			"let",
+			"const",
+			"console",
+			"tile_type",
+			"monta_terreno",
+			"let",
+			"lista_terrenos",
+			"executa",
+			"terreno_valido",
+			"lista_terrenos",
+			"monta_terreno",
+			"lista_terrenos",
+			"divisoes",
+			"grid",
+			"nome",
+			"lista_terrenos",
+			"salvarAleatorio",
+			"nome",
+			"pos",
+			"nome",
+			"preload",
+			"canvas-holder",
+			"Blockly",
+			"inject",
+			"version",
+			"setup",
+			"toolbox",
+			"scrollbars",
+			"toolbox",
+			"Blockly",
+			"blockly",
+			"toolbox",
+			"blocklyDiv",
+			"mundos",
+			"bloqueia_licencas",
+			"redirect"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"nth-of-type"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "mundolunar/settings/base.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4638,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								704,
+								704
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "blog/models.py",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1196,
+								1196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 415.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "blog/templates/blog/home_page.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2342,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "mundolunar/templates/base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1012,
+								1012
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "mundolunar/templates/blog.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2342,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "mundolunar.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main",
+				"static/js/main.js"
+			],
+			[
+				"ValidarViews",
+				"central/views/ValidarViews.py"
+			],
+			[
+				"ConteudoViews",
+				"central/views/ConteudoViews.py"
+			],
+			[
+				"hub-",
+				"learn/templates/hub/lead/hub-lead.html"
+			],
+			[
+				"read",
+				"_docker/README.MD"
+			],
+			[
+				"",
+				"README.md"
+			],
+			[
+				"new-base",
+				"learn/templates/new-base.html"
+			],
+			[
+				"lead-nav-bar.html",
+				"learn/templates/lead-nav-bar.html"
+			],
+			[
+				"shepherd.css",
+				"learn/static/_vendor/shepherd.css"
+			],
+			[
+				"hub-lead",
+				"learn/templates/hub/lead/hub-lead.html"
+			],
+			[
+				"new-hub",
+				"learn/templates/hub/new-hub.html"
+			],
+			[
+				"mapa-lea",
+				"learn/templates/leads/mapa-lead.html"
+			],
+			[
+				"jobs",
+				"central/jobs.py"
+			],
+			[
+				"ErroV",
+				"central/views/ErroViews.py"
+			],
+			[
+				"conteudo.html",
+				"learn/templates/fase/conteudo.html"
+			],
+			[
+				"toolbox.js",
+				"static/js/p5js/blockly/toolbox.js"
+			],
+			[
+				"blocos.js",
+				"static/js/p5js/blockly/botoes/blocos.js"
+			],
+			[
+				"fase.html",
+				"learn/templates/fase/fase.html"
+			],
+			[
+				"Blo",
+				"static/js/p5js/blockly/BlocklyMain.js"
+			],
+			[
+				"Eggs",
+				"static/js/p5js/blockly/Eggs.js"
+			],
+			[
+				"eggs",
+				"learn/templates/blockly/eggs.html"
+			],
+			[
+				"Blockly",
+				"learn/static/js/p5js/blockly/BlocklyMain.js"
+			],
+			[
+				"blockly-fase",
+				"learn/static/js/p5js/blockly/blockly-fase.js"
+			],
+			[
+				"block",
+				"learn/templates/leads/fase/games/blockly.html"
+			],
+			[
+				"new-bas",
+				"learn/templates/new-base.html"
+			],
+			[
+				"editar",
+				"central/templates/administracao/pedagogico/conteudo/editar/editar-blockly.html"
+			],
+			[
+				"BlocklyM",
+				"static/js/p5js/blockly/BlocklyMain.js"
+			],
+			[
+				"editar-tile",
+				"central/templates/administracao/pedagogico/conteudo/editar/editar-tiles.html"
+			],
+			[
+				"Bloc",
+				"static/js/p5js/blockly/BlocklyMain.js"
+			],
+			[
+				"Block",
+				"static/js/p5js/blockly/BlocklyMain.js"
+			],
+			[
+				"BlocklyMai",
+				"static/js/p5js/blockly/BlocklyMain.js"
+			],
+			[
+				"setting",
+				"CBCentral/settings.py"
+			],
+			[
+				"editar-bl",
+				"central/templates/administracao/pedagogico/conteudo/editar/editar-blockly.html"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"toolbox",
+				"learn/static/js/p5js/blockly/toolbox.js"
+			],
+			[
+				"blockly.html",
+				"learn/templates/fase/games/blockly.html"
+			],
+			[
+				"conteudo",
+				"learn/templates/fase/conteudo.html"
+			],
+			[
+				"ew-base.html",
+				"learn/templates/new-base.html"
+			],
+			[
+				"javascript_compressed",
+				"static/js/p5js/blockly/javascript_compressed.js"
+			],
+			[
+				"Personagem",
+				"static/js/p5js/blockly/Personagem.js"
+			],
+			[
+				"BlocklyMain",
+				"static/js/p5js/blockly/BlocklyMain.js"
+			],
+			[
+				"block_worlds",
+				"learn/templates/language_worlds/block_worlds.html"
+			],
+			[
+				"Mundo.py",
+				"learn/models/Mundo.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 79.0,
+		"last_filter": "personagem",
+		"selected_items":
+		[
+			[
+				"personagem",
+				"Personagem"
+			],
+			[
+				"setup",
+				"setup"
+			],
+			[
+				"terren",
+				"terreno_valido"
+			],
+			[
+				"width",
+				"width"
+			],
+			[
+				"image",
+				"image"
+			],
+			[
+				"monta_terreno",
+				"monta_terreno"
+			],
+			[
+				"bloqueia_licencas",
+				"bloqueia_licencas"
+			]
+		],
+		"width": 608.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 381.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

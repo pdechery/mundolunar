@@ -1,0 +1,101 @@
+{% load wagtailcore_tags %}
+{% load wagtailuserbar %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Lunar</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <script src="{% static 'js/navigation.js' %}" defer></script>
+    <script src="{% static 'js/fetch_songs.js' %}" defer></script>
+    <script src="{% static 'vendor/vue.global.js' %}" defer></script>
+</head>
+<body>
+    {% wagtailuserbar %}
+    <div id="main">
+        
+        <div class="cell">
+            <h2>
+                <a href="#" class="index">Mundo Lunar</a>
+            </h2>
+        </div>
+        <div class="cell"></div>
+        <div class="cell no-margin">
+            <h2>
+                <a href="#" class="song">Logo Mais</a>
+            </h2>
+        </div>
+
+        <section class="content index">
+            {% for post in page.get_children %}
+                {% if post.content_type.name == "song" %}
+                <ul id="songs">
+                    <li>
+                        <a href="javascript:void(0)" data-name="{{ post.slug }}">{{ post.title }}</a>
+                    </li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+            <p><a href="#" class="xebs">xebs</a></p>
+        </section>
+
+        <section class="content song">
+
+            <h2>{{ sobre.title }}</h2>
+
+            {{ sobre.textpage.body|richtext }}
+
+            <p><a href="#" class="xebs">xebs</a></p>
+
+        </section>
+        
+        <div class="cell blue"></div>
+        <div class="cell">
+            <h2>
+                <a href="#" class="sobre">Sobre</a>
+            </h2>
+        </div>
+        <div class="cell no-margin green"></div>
+
+        <section class="content sobre">
+            
+            {{ destaque.title }}
+
+            {{ destaque.songpage.body|richtext }}
+
+            <p><a href="#" class="xebs">xebs</a></p>
+
+        </section>
+
+        <div class="cell">
+            <h2>
+                <a href=""></a>
+            </h2>
+        </div>
+        <div class="cell blue"></div>
+        <div class="cell no-margin blue"></div>
+
+        <section class="content songmenu">
+
+            <h2></h2>
+
+            <div></div>
+
+            <p><a href="#" class="xebs">xebs</a></p>
+
+        </section>
+    
+    </div>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</body>
+</html>

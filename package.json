@@ -1,0 +1,25 @@
+{
+  "name": "mundolunar",
+  "version": "1.0.0",
+  "description": "Blog Musical",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdechery/mundolunar.git"
+  },
+  "author": "Pierre Dechery",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdechery/mundolunar/issues"
+  },
+  "homepage": "https://github.com/pdechery/mundolunar#readme",
+  "devDependencies": {
+    "less-watch-compiler": "^1.16.3"
+  },
+  "dependencies": {
+    "vue": "^3.2.31"
+  }
+}
