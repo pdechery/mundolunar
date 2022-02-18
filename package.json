@@ -16,6 +16,9 @@
     "url": "https://github.com/pdechery/mundolunar/issues"
   },
   "homepage": "https://github.com/pdechery/mundolunar#readme",
+  "scripts": {
+    "less": "less-watch-compiler --main-file main.less ./blog/static/build/less/ ./blog/static/css/"
+  },
   "devDependencies": {
     "less-watch-compiler": "^1.16.3"
   },

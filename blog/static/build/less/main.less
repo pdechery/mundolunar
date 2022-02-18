@@ -24,17 +24,6 @@ body {
 	.type();
 }
 
-.overlay-cell() {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	opacity: 0.35;
-}
-
 #main {
 	width: 942px;
 	display: flex;
@@ -49,17 +38,13 @@ body {
 		margin-bottom: 20px;
 		color: #fff;
 		a {
+			display: block;
+			width: 300px;
+			height: 300px;
 			text-decoration: none;
 			color: #fff;
 		}
-		h2 {
-			font-size:  1.8em;
-			font-weight: 300;
-			margin: 0 0 30px 30px;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-		}
+
 	}
 }
 
@@ -78,6 +63,7 @@ section.content {
 	width:  100%;
 	font-size: 1.4em;
 	line-height: 1.4em;
+	position: relative;
 	h3 {
 		font-weight: 300;
 	}
@@ -89,23 +75,24 @@ section.content {
 		background-color: #254308;
 	}
 	&.song {
-		background-color: #a39a37;
+		background-color: #ada664;
 		color: #fff;
+	}
+	&.songmenu {
+		min-height: 450px;
+	}
+	a.close {
+		display: block;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 20px;
+		right: 20px;
 	}
 }
 
 // CÉLULAS
 
-#main .cell:nth-of-type(1),
-#main .cell:nth-of-type(3),
-#main .cell:nth-of-type(5) {
-	&:before {
-		.overlay-cell();
-	}
-	background-color: #222;
-	//background: url('../img/foto-com-guitarra.png') 0 0 no-repeat;
-	background-size: cover;
-}
 .cell:nth-of-type(2) {
 	background: url('../img/bg-cell-0-1.png');
 }

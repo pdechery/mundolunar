@@ -3,18 +3,50 @@
  * 
  */
 
+ // seletores
+
 const link = document.querySelectorAll('.cell a');
 const content = document.querySelectorAll('.content');
-const xebs = document.querySelectorAll('a.xebs');
+const close = document.querySelectorAll('a.close');
 const contentAll = document.querySelectorAll('.content');
 const menuIndex = document.querySelectorAll('.content.index a');
+
 const elHeight = 300;
 
-function showContent(name) {
+
+/**
+ * Exibir Blocos Conteúdo
+ * 
+ * - Exibe o bloco mediante parâmetro
+ * - Se for passado nome da música irá fazer o fetch *após* o Scroll (mas não está funcionando bem)
+ * 
+ */ 
+
+function showContent(name, song) {
+	
 	const cara = [...contentAll].filter((el)=>el.classList.contains(name));
+	
 	cara[0].style.display = "block";
-	//cara[0].scrollIntoView();
+
+	window.scrollTo({
+		top: cara[0].offsetTop - 20,
+		left: 0,
+		behavior: 'smooth'
+	});
+
+	debugger;
+
+	if(song) fetchSong(song);
+
 }
+
+/**
+ * Menu de músicas
+ * 
+ * - Oculta todos os blocos de conteúdo
+ * - Exibe o bloco da música selecionada
+ * 
+ */ 
 
 menuIndex.forEach((el)=>{
 
@@ -24,19 +56,18 @@ menuIndex.forEach((el)=>{
 
 		contentAll.forEach((el)=>el.style.display = "none");
 
-		showContent('songmenu');
-
-		let contentSongMenu = document.querySelector('.content.songmenu');
-
-		window.scrollTo({
-		  top: contentSongMenu.offsetTop - 20,
-		  left: 0,
-		  behavior: 'smooth'
-		});
+		showContent('songmenu', el.dataset.name);
 	
 	})
 
 });
+
+/**
+ * Navegação nos cards
+ * 
+ * - Identifica qual bloco será exibido/scrollado através de classe no link
+ *
+ */
 
 link.forEach((el)=>{
 
@@ -47,30 +78,27 @@ link.forEach((el)=>{
 		let offsetTop = el.parentNode.parentNode.offsetTop;
 
 		if(el.classList.contains('index')) {
-			showContent('index');
+			showContent('index', null);
 		}
 
 		if(el.classList.contains('song')) {
-			showContent('song');
+			showContent('song', null);
 		}
 
 		if(el.classList.contains('sobre')) {
-			showContent('sobre');
+			showContent('sobre', null);
 		}
-
-		window.scrollTo({
-		  top: offsetTop + elHeight,
-		  left: 0,
-		  behavior: 'smooth'
-		});
 
 	});
 
 });
 
-// Para fechar tudo
+/**
+ * Fechar Blocos Conteúdo
+ * 
+ */
 
-xebs.forEach(function(el){
+close.forEach(function(el){
 
 	el.addEventListener('click', function(ev){
 		
