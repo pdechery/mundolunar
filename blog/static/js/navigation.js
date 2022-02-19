@@ -10,8 +10,35 @@ const content = document.querySelectorAll('.content');
 const close = document.querySelectorAll('a.close');
 const contentAll = document.querySelectorAll('.content');
 const menuIndex = document.querySelectorAll('.content.index a');
+const sbeg = document.querySelector("#sbeg");
 
 const elHeight = 300;
+
+window.addEventListener('scroll', function(e) {
+	sbeg.textContent = window.scrollY;
+});
+
+/**
+ * Voltar ao topo
+ * 
+ */
+
+ function goUp() {
+	
+	window.scrollTo({
+	  top: 0,
+	  left: 0,
+	  behavior: 'smooth'
+	});
+	
+	contentAll.forEach((el)=>el.style.display = "none");
+ }
+
+sbeg.addEventListener('click', goUp);
+
+close.forEach((el)=>{	
+	el.addEventListener('click', goUp);
+});
 
 
 /**
@@ -24,17 +51,15 @@ const elHeight = 300;
 
 function showContent(name, song) {
 	
-	const cara = [...contentAll].filter((el)=>el.classList.contains(name));
+	const contentArea = [...contentAll].filter((el)=>el.classList.contains(name))[0];
 	
-	cara[0].style.display = "block";
+	contentArea.style.display = "block";
 
 	window.scrollTo({
-		top: cara[0].offsetTop - 20,
+		top: contentArea.offsetTop - 20,
 		left: 0,
 		behavior: 'smooth'
 	});
-
-	debugger;
 
 	if(song) fetchSong(song);
 
@@ -90,28 +115,5 @@ link.forEach((el)=>{
 		}
 
 	});
-
-});
-
-/**
- * Fechar Blocos Conteúdo
- * 
- */
-
-close.forEach(function(el){
-
-	el.addEventListener('click', function(ev){
-		
-		ev.preventDefault();
-
-		window.scrollTo({
-		  top: 0,
-		  left: 0,
-		  behavior: 'smooth'
-		});
-
-		contentAll.forEach((el)=>el.style.display = "none");
-	
-	})
 
 });
