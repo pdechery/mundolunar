@@ -1,0 +1,21 @@
+version: "3.2"
+services:
+ # container name
+  postgres:
+   # build the image from Dockerfile
+    image: postgres:latest
+
+    # bind mount volume for Postgres data
+    volumes:
+      - ./pg-data/:/var/lib/postgresql/data
+      - ./pg-dumps/:/home/dumps
+
+    # open port so host machine can access
+    ports:
+     - "5432:5432"
+
+    # configure Postgres environment variables
+    environment:
+      - POSTGRES_USER=mundolunar
+      - POSTGRES_DB=mundolunar
+      - POSTGRES_PASSWORD=abc123
