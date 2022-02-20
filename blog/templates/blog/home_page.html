@@ -16,14 +16,14 @@
     <script src="{% static 'js/navigation.js' %}" defer></script>
 </head>
 <body>
-    <div id="sbeg"></div>
+    <div id="up">m</div>
     <div id="main">
         
         <div class="cell index">
             <img src="{% static 'img/pic1.png' %}" alt="">
         </div>
         <div class="cell"></div>
-        <div class="cell song no-margin">
+        <div class="cell sobre no-margin">
             <img src="{% static 'img/pic5.png' %}" alt="">
         </div>
 
@@ -42,8 +42,8 @@
             </a>
         </section>
 
-        <section class="content song">
-            <h2>{{ sobre.title }}</h2>
+        <section class="content sobre">
+            <!-- <h2>{{ sobre.title }}</h2> -->
             {{ sobre.textpage.body|richtext }}
             <a href="javascript:void(0)" class="close">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
@@ -51,12 +51,12 @@
         </section>
         
         <div class="cell blue"></div>
-        <div class="cell sobre">
+        <div class="cell song">
             <img src="{% static 'img/pic4.png' %}" alt="">
         </div>
         <div class="cell no-margin green"></div>
 
-        <section class="content sobre">
+        <section class="content song">
             <h2>{{ destaque.title }}</h2>
             {{ destaque.songpage.body|richtext }}
             <a href="javascript:void(0)" class="close">

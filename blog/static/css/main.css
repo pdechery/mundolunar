@@ -54,14 +54,18 @@ body {
 #main .no-margin {
   margin: 0 0 0 0;
 }
-#sbeg {
+#up {
   position: fixed;
   bottom: 40px;
   right: 40px;
   width: 60px;
   height: 60px;
-  background-color: #fff;
+  border: 2px solid #fff;
   cursor: pointer;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
 }
 section.content {
   display: none;
@@ -101,12 +105,6 @@ section.content a.close {
   height: 30px;
   top: 20px;
   right: 20px;
-}
-section.content ul#songs {
-  list-style-type: none;
-}
-section.content ul#songs li {
-  list-style: none;
 }
 .cell:nth-of-type(2) {
   background: url('../img/bg-cell-0-1.png');

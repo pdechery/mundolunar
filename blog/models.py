@@ -19,7 +19,7 @@ class HomePage(Page):
     def get_context(self, request, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
 
-        context['sobre'] = TextPage.objects.filter(slug='bagaca').first()
+        context['sobre'] = TextPage.objects.filter(slug='sobre').first()
         context['destaque'] = SongPage.objects.first()
         return context
 

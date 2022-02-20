@@ -10,13 +10,11 @@ const content = document.querySelectorAll('.content');
 const close = document.querySelectorAll('a.close');
 const contentAll = document.querySelectorAll('.content');
 const menuIndex = document.querySelectorAll('.content.index a');
-const sbeg = document.querySelector("#sbeg");
+const up = document.querySelector("#up");
 
-const elHeight = 300;
-
-window.addEventListener('scroll', function(e) {
-	sbeg.textContent = window.scrollY;
-});
+// window.addEventListener('scroll', function(e) {
+// 	up.textContent = window.scrollY;
+// });
 
 /**
  * Voltar ao topo
@@ -34,7 +32,7 @@ window.addEventListener('scroll', function(e) {
 	contentAll.forEach((el)=>el.style.display = "none");
  }
 
-sbeg.addEventListener('click', goUp);
+up.addEventListener('click', goUp);
 
 close.forEach((el)=>{	
 	el.addEventListener('click', goUp);
