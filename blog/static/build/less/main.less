@@ -24,6 +24,16 @@ body {
 	.type();
 }
 
+.overlay-cell() {
+	//display: none;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 #main {
 	width: 942px;
 	display: flex;
@@ -37,15 +47,24 @@ body {
 		margin-right: 20px;
 		margin-bottom: 20px;
 		color: #fff;
-		a {
-			display: block;
-			width: 300px;
-			height: 300px;
-			text-decoration: none;
-			color: #fff;
+		&:before {
+			.overlay-cell();
 		}
 
 	}
+}
+
+.cell.index,
+.cell.sobre,
+.cell.song {
+	cursor: pointer;
+}
+
+.cell.index:hover::before,
+.cell.sobre:hover::before,
+.cell.song:hover::before, {
+	background-color: #000;
+	opacity: 0.35;
 }
 
 #main .no-margin {

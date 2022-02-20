@@ -5,7 +5,7 @@
 
  // seletores
 
-const link = document.querySelectorAll('.cell a');
+const linkCells = document.querySelectorAll('.cell');
 const content = document.querySelectorAll('.content');
 const close = document.querySelectorAll('a.close');
 const contentAll = document.querySelectorAll('.content');
@@ -94,7 +94,7 @@ menuIndex.forEach((el)=>{
  *
  */
 
-link.forEach((el)=>{
+linkCells.forEach((el)=>{
 
 	el.addEventListener('click', (ev)=>{
 
