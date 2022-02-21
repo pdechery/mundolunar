@@ -2,6 +2,8 @@ from .base import *
 
 DEBUG = False
 
+ALLOWED_HOSTS = ['127.0.0.1', 'www.mundolunar.art.br']
+
 DATABASES = {
   'default': {
     'CONN_MAX_AGE': 0,
