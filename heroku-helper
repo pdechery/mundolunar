@@ -1,0 +1,10 @@
+
+docker exec -t mundolunar_postgres_1 pg_dump -d mundolunar -U mundolunar --no-acl --no-owner -f /home/dumps/mundolunar_$(date +"%Y-%m-%d")
+
+cat your_dump.sql | docker exec -i your-db-container psql -U postgres
+
+heroku pg:psql -a mundolunar -f pg-dumps/mundolunar_2022-02-21 
+
+ou
+
+heroku pg:psql -a mundolunar < pg-dumps/mundolunar_2022-02-21 
