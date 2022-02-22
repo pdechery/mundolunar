@@ -1,6 +1,7 @@
 	/**
  *  Scripts Mundo Lunar
  * @todo passar para Vue
+ * @todo passar URLs para o Settings e trazer do BE
  * 
  */
 
@@ -8,7 +9,7 @@ const songdiv = document.querySelector(".content.songmenu");
 
 function fetchSong(song) {
 
-	fetch('http://127.0.0.1:8000/'+song, {
+	fetch('https://www.mundolunar.art.br/'+song, {
 		headers: {
 	      'Content-Type': 'application/json'
 	    },
