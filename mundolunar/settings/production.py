@@ -1,5 +1,20 @@
 from .base import *
 
+# Database
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'CONN_MAX_AGE': 0,
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': '172.18.0.2',
+        'NAME': 'mundolunar',
+        'PASSWORD': 'abc123',
+        'PORT': '5432',
+        'USER': 'mundolunar'
+    }
+}
+
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.mundolunar.art.br']

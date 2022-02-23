@@ -1,5 +1,4 @@
 {% load wagtailcore_tags %}
-{% load wagtailuserbar %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -51,12 +50,20 @@
         </section>
         
         <div class="cell blue"></div>
-        <div class="cell song">
+        <div class="cell song-destaque">
             <img src="{% static 'img/pic4.png' %}" alt="">
         </div>
         <div class="cell no-margin green"></div>
 
         <section class="content song">
+            <h2></h2>
+            <div></div>
+            <a href="javascript:void(0)" class="close">
+                <img src="{% static 'img/x_icon.svg' %}" alt="">
+            </a>
+        </section>
+
+        <section class="content song-destaque">
             <h2>{{ destaque.title }}</h2>
             {{ destaque.songpage.body|richtext }}
             <a href="javascript:void(0)" class="close">
@@ -75,15 +82,12 @@
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
         </section>
+
+        <div class="cell"></div>
+        <div class="cell blue"></div>
+        <div class="cell no-margin blue"></div>
     
     </div>
-
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
 
 </body>
 </html>

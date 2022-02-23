@@ -94,26 +94,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mundolunar.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'sqlite': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    'default': {
-        'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': '172.18.0.2',
-        'NAME': 'mundolunar',
-        'PASSWORD': 'abc123',
-        'PORT': '5432',
-        'USER': 'mundolunar'
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 

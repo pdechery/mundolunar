@@ -9,7 +9,7 @@ const linkCells = document.querySelectorAll('.cell');
 const content = document.querySelectorAll('.content');
 const close = document.querySelectorAll('a.close');
 const contentAll = document.querySelectorAll('.content');
-const menuIndex = document.querySelectorAll('.content.index a');
+const songIndex = document.querySelectorAll('.content.index a');
 const up = document.querySelector("#up");
 
 // window.addEventListener('scroll', function(e) {
@@ -21,16 +21,16 @@ const up = document.querySelector("#up");
  * 
  */
 
- function goUp() {
+function goUp() {
 	
 	window.scrollTo({
 	  top: 0,
 	  left: 0,
 	  behavior: 'smooth'
 	});
-	
+
 	contentAll.forEach((el)=>el.style.display = "none");
- }
+}
 
 up.addEventListener('click', goUp);
 
@@ -43,7 +43,7 @@ close.forEach((el)=>{
  * Exibir Blocos Conteúdo
  * 
  * - Exibe o bloco mediante parâmetro
- * - Se for passado nome da música irá fazer o fetch *após* o Scroll (mas não está funcionando bem)
+ * - Se for passado nome da música irá fazer o fetch após o Scroll
  * 
  */ 
 
@@ -71,15 +71,16 @@ function showContent(name, song) {
  * 
  */ 
 
-menuIndex.forEach((el)=>{
+songIndex.forEach((el)=>{
 
 	el.addEventListener('click', (ev)=> {
 
 		ev.preventDefault();
 
+		// apagar todos os blocos
 		contentAll.forEach((el)=>el.style.display = "none");
 
-		showContent('songmenu', el.dataset.name);
+		showContent('song', el.dataset.name);
 	
 	})
 
@@ -104,8 +105,8 @@ linkCells.forEach((el)=>{
 			showContent('index', null);
 		}
 
-		if(el.classList.contains('song')) {
-			showContent('song', null);
+		if(el.classList.contains('song-destaque')) {
+			showContent('song-destaque', null);
 		}
 
 		if(el.classList.contains('sobre')) {

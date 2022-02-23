@@ -56,13 +56,13 @@ body {
 
 .cell.index,
 .cell.sobre,
-.cell.song {
+.cell.song-destaque {
 	cursor: pointer;
 }
 
 .cell.index:hover::before,
 .cell.sobre:hover::before,
-.cell.song:hover::before, {
+.cell.song-destaque:hover::before, {
 	background-color: #000;
 	opacity: 0.35;
 }
@@ -113,6 +113,10 @@ section.content {
 		background-color: #254308;
 		color: #fff;
 	}
+	&.song-destaque {
+		background-color: #ada664;
+		color: #fff;
+	}
 	&.song {
 		background-color: #ada664;
 		color: #fff;
@@ -132,6 +136,12 @@ section.content {
 		// list-style-type: none;
 		li {
 			// list-style: none;
+			a {
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }

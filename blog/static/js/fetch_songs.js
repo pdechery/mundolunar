@@ -5,19 +5,19 @@
  * 
  */
 
-const songdiv = document.querySelector(".content.songmenu");
+const songdiv = document.querySelector(".content.song");
 
 function fetchSong(song) {
 
-	fetch('https://www.mundolunar.art.br/'+song, {
+	fetch(`/${song}`, {
 		headers: {
 	      'Content-Type': 'application/json'
 	    },
 	})
 	.then(response => response.json())
 	.then(data => {
-		songdiv.querySelector("h2").innerHTML=data.title;
-		songdiv.querySelector("h2+div").innerHTML=data.body
+		songdiv.querySelector('div').innerHTML="";
+		songdiv.querySelector('h2').innerHTML=data.title;
 		return data;
 	})
 	.then(data => {
@@ -39,7 +39,7 @@ function fetchSong(song) {
 		SCWidget.setAttribute('width','100%');
 		SCWidget.setAttribute('height','300px');
 		SCWidget.setAttribute('src',encodeURI(SCURl)+data.song_id+"&"+SCParams);
-		songdiv.querySelector("h2+div").appendChild(SCWidget);
+		songdiv.querySelector('div').appendChild(SCWidget);
 	});
 
 }
