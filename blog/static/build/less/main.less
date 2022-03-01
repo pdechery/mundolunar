@@ -7,6 +7,13 @@
  * 
  */
 
+ // CORES
+
+ @verde: #1c2810;
+ @bege: #c7be6f;
+ @branco-gelo: #d3d3d3;
+ @azul-escuro: #030822;
+
 .type() {
 	font-size: 16px;
 	font-family: 'Merriweather', serif;
@@ -105,24 +112,23 @@ section.content {
 		color: #fff;
 	}
 	&.index {
-		background-color: #030822;
+		background-color: @azul-escuro;
 		color: #fff;
 	}
 	&.sobre {
-		background-color: #254308;
+		background-color: @verde;
 		color: #fff;
 	}
 	&.song-destaque {
-		background-color: #ada664;
-		color: #fff;
+		background-color: @bege;
+		color: #000;
 	}
 	&.song {
-		//background-color: #ada664;
-		background-color: #1a1a1a;
-		color: #fff;
+		background-color: @branco-gelo;
+		color: #585858;
 		padding-right: 40px; // mudando padding para ficar bom com a navegação
 		h2 {
-			color: #ada664;
+			color: #585858;
 		}
 	}
 	&.songmenu {
@@ -150,7 +156,7 @@ section.content {
 
 // FICA TÉCNICA MÚSICA
 
-.content.song dl {
+.content dl {
 	display: flex;
 	flex-wrap: wrap;
 	width: 450px;
@@ -177,7 +183,11 @@ section.content {
 	margin-top: 40px;
 	a {
 		//color: #000;
-		color: #ada664;
+		color: #25430a;
+		&.disabled {
+			color: #eee;
+			text-decoration: none;
+		}
 	}
 	display: flex;
 	span:last-child {

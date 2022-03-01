@@ -5,3 +5,4 @@ static/
 !blog/static
 *sublime*
 *.sqlite3
+pg-dumps/*

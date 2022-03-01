@@ -88,20 +88,20 @@ section.content.index {
   color: #fff;
 }
 section.content.sobre {
-  background-color: #254308;
+  background-color: #1c2810;
   color: #fff;
 }
 section.content.song-destaque {
-  background-color: #ada664;
-  color: #fff;
+  background-color: #c7be6f;
+  color: #000;
 }
 section.content.song {
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #d3d3d3;
+  color: #585858;
   padding-right: 40px;
 }
 section.content.song h2 {
-  color: #ada664;
+  color: #585858;
 }
 section.content.songmenu {
   min-height: 700px;
@@ -120,20 +120,20 @@ section.content ul#songs li a {
 section.content ul#songs li a:hover {
   text-decoration: underline;
 }
-.content.song dl {
+.content dl {
   display: flex;
   flex-wrap: wrap;
   width: 450px;
 }
-.content.song dl dt {
+.content dl dt {
   text-align: right;
   font-weight: bold;
   margin: 0;
 }
-.content.song dl dt:after {
+.content dl dt:after {
   content: ":";
 }
-.content.song dl dd {
+.content dl dd {
   flex-grow: 2;
   flex-shrink: 0;
   flex-basis: 60%;
@@ -145,7 +145,11 @@ section.content ul#songs li a:hover {
   display: flex;
 }
 .content.song nav a {
-  color: #ada664;
+  color: #25430a;
+}
+.content.song nav a.disabled {
+  color: #eee;
+  text-decoration: none;
 }
 .content.song nav span:last-child {
   text-align: right;

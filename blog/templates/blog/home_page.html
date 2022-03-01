@@ -47,7 +47,8 @@ k{% load wagtailcore_tags %}
         <!-- TEXTO -->
 
         <section class="content sobre">
-            {{ sobre.textpage.body|richtext }}
+            <h2>{{ sobre.specific.title }}</h2>
+            {{ sobre.specific.body|richtext }}
             <a href="javascript:void(0)" class="close">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
@@ -64,9 +65,6 @@ k{% load wagtailcore_tags %}
         <section class="content song">
             <h2>[[song.title]]</h2>
             <div></div>
-            <a href="javascript:void(0)" class="close">
-                <img src="{% static 'img/x_icon.svg' %}" alt="">
-            </a>
             <dl>
                 <dt>Música e letra</dt>
                 <dd>[[song.autoria]]</dd>
@@ -84,16 +82,39 @@ k{% load wagtailcore_tags %}
                 <dd>[[song.data_gravacao]]</dd>
             </dl>
             <nav>
-                <span class="anterior"><a href="#" @click.prevent="fetchSong([[song.anterior]])">< Anterior</a></span>
-                <span class="proxima"><a href="#" @click.prevent="fetchSong([[song.proxima]])">Próxima ></a></span>
+                <span class="anterior">
+                    <a href="#" :class="{ disabled: !song.anterior }" @click.prevent="fetchSong([[song.anterior]])">< Anterior</a>
+                </span>
+                <span class="proxima">
+                    <a href="#" :class="{ disabled: !song.proxima }" @click.prevent="fetchSong([[song.proxima]])">Próxima ></a>
+                </span>
             </nav>
+            <a href="javascript:void(0)" class="close">
+                <img src="{% static 'img/x_icon.svg' %}" alt="">
+            </a>
         </section>
 
         <!-- MÚSICA DESTAQUE -->
 
         <section class="content song-destaque">
             <h2>{{ destaque.title }}</h2>
-            {{ destaque.songpage.body|richtext }}
+            {{ destaque.specific.body|richtext }}
+            <dl>
+                <dt>Música e letra</dt>
+                <dd>{{destaque.specific.autoria}}</dd>
+
+                <dt>Softwares</dt>
+                <dd>{{destaque.specific.equipamentos}}</dd>
+
+                <dt>Instrumentos</dt>
+                <dd>{{destaque.specific.instrumentos}}</dd>
+
+                <dt>Clima da canção</dt>
+                <dd>{{destaque.specific.clima}}</dd>
+
+                <dt>Data da gravação</dt>
+                <dd>{{destaque.specific.data_gravacao}}</dd>
+            </dl>
             <a href="javascript:void(0)" class="close">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
