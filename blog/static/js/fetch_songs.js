@@ -7,11 +7,15 @@ Vue.createApp({
 	data() {
 		return {
 			song: {
-				song_id: '',
+				soundcloud_id: '',
 				title: '',
 				proxima: '',
 				anterior: '',
-				date: ''
+				data_gravacao: '',
+				autoria: '',
+				equipamentos: '',
+				instrumentos: '',
+				clima: ''
 			}
 		}
 	},
@@ -43,11 +47,15 @@ Vue.createApp({
 			})
 			.then(response => response.json())
 			.then(data => {
-				this.song.song_id = data.song_id;
+				this.song.soundcloud_id = data.soundcloud_id;
 				this.song.title = data.title;
 				this.song.proxima = data.proxima;
 				this.song.anterior = data.anterior;
-				this.song.date = data.date;
+				this.song.data_gravacao = data.data_gravacao;
+				this.song.autoria = data.autoria;
+				this.song.equipamentos = data.equipamentos;
+				this.song.instrumentos = data.instrumentos;
+				this.song.clima = data.clima;
 
 				// Soundcloud
 
@@ -70,7 +78,7 @@ Vue.createApp({
 				SCWidget.setAttribute('frameborder','no')
 				SCWidget.setAttribute('width','100%');
 				SCWidget.setAttribute('height','300px');
-				SCWidget.setAttribute('src',encodeURI(SCURl)+data.song_id+"&"+SCParams);
+				SCWidget.setAttribute('src',encodeURI(SCURl)+this.song.soundcloud_id+"&"+SCParams);
 				songdiv.querySelector('div').appendChild(SCWidget);
 			});
 		}

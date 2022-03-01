@@ -34,7 +34,6 @@ k{% load wagtailcore_tags %}
                 {% if post.content_type.name == "song" %}
                 <ul id="songs">
                     <li>
-                        <!-- <a href="javascript:void(0)" data-name="{{ post.slug }}">{{ post.title }}</a> -->
                         <a href="#" @click.prevent="fetchSong('{{post.slug}}')">{{ post.title }}</a>
                     </li>
                 </ul>
@@ -69,17 +68,20 @@ k{% load wagtailcore_tags %}
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
             <dl>
-                <dd>Música e letra</dd>
-                <dt>Pierre Dechery</dt>
+                <dt>Música e letra</dt>
+                <dd>[[song.autoria]]</dd>
 
-                <dd>Equipamentos e instrumentos utilizados</dd>
-                <dt>Ardour, Teclado MIDI, Guitarra</dt>
+                <dt>Softwares</dt>
+                <dd>[[song.equipamentos]]</dd>
 
-                <dd>Clima da canção</dd>
-                <dt>Tenso, festivo</dt>
+                <dt>Instrumentos</dt>
+                <dd>[[song.instrumentos]]</dd>
 
-                <dd>Data da gravação</dd>
-                <dt>02/22</dt>
+                <dt>Clima da canção</dt>
+                <dd>[[song.clima]]</dd>
+
+                <dt>Data da gravação</dt>
+                <dd>[[song.data_gravacao]]</dd>
             </dl>
             <nav>
                 <span class="anterior"><a href="#" @click.prevent="fetchSong([[song.anterior]])">< Anterior</a></span>

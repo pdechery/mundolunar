@@ -20,20 +20,24 @@ def get_links(request, slug):
 
 	proxima = anterior = 0
 
-	if(len(proximas) > 0):
+	if(len(proximas) >= 2):
 		proxima = proximas[1]
 
-	if(len(anteriores) >= 2):
+	if(len(anteriores) >= 1):
 		anterior = anteriores[len(anteriores) - 1]
 
 	song = Page.objects.filter(slug=slug).first()
 
 	return JsonResponse({
-		'song_id': song.specific.song_id,
+		'soundcloud_id': song.specific.soundcloud_id,
 		'title': song.title,
 		'proxima': proxima,
 		'anterior': anterior,
-		'date':song.specific.date
+		'data_gravacao':song.specific.data_gravacao,
+		'equipamentos':song.specific.equipamentos,
+		'instrumentos':song.specific.instrumentos,
+		'autoria':song.specific.autoria,
+		'clima':song.specific.clima,
 	}, safe=False)
 
 

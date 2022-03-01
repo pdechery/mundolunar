@@ -8,7 +8,7 @@ from django.http import JsonResponse
 
 # Home
 class HomePage(Page):
-    thumbnail = models.ImageField(upload_to='uploads',blank=True)
+    thumbnail = models.ImageField(upload_to='uploads', blank=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('thumbnail', classname="full"),
@@ -39,12 +39,21 @@ class SongPage(Page):
     class Meta:
         verbose_name = "song"
 
-    date = models.DateField("Post date")
-    body = RichTextField(null=True,blank=True)
-    song_id = models.IntegerField(null=True,blank=True)
+    data_gravacao = models.DateField("Data Gravação")
+    body = RichTextField(null=True,blank=True) # pode ser usado pra letra
+    soundcloud_id = models.IntegerField(null=True, blank=True)
+
+    autoria = models.CharField(max_length=255, default="Pierre Dechery")
+    equipamentos = models.CharField(max_length=255, null=True,blank=True)
+    instrumentos = models.CharField(max_length=255, null=True,blank=True)
+    clima = models.CharField(max_length=255, null=True, blank=True) # como tags do rate your music
 
     content_panels = Page.content_panels + [
-        FieldPanel('date'),
+        FieldPanel('data_gravacao'),
         FieldPanel('body', classname="full"),
-        FieldPanel('song_id'),
+        FieldPanel('soundcloud_id'),
+        FieldPanel('autoria'),
+        FieldPanel('equipamentos'),
+        FieldPanel('instrumentos'),
+        FieldPanel('clima'),
     ]

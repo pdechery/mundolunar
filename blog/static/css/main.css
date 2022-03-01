@@ -98,6 +98,7 @@ section.content.song-destaque {
 section.content.song {
   background-color: #ada664;
   color: #fff;
+  padding-right: 40px;
 }
 section.content.songmenu {
   min-height: 700px;
@@ -116,8 +117,32 @@ section.content ul#songs li a {
 section.content ul#songs li a:hover {
   text-decoration: underline;
 }
-.content.song nav {
+.content.song dl {
   display: flex;
+  flex-wrap: wrap;
+  width: 450px;
+}
+.content.song dl dt {
+  text-align: right;
+  font-weight: bold;
+  margin: 0;
+}
+.content.song dl dt:after {
+  content: ":";
+}
+.content.song dl dd {
+  flex-grow: 2;
+  flex-shrink: 0;
+  flex-basis: 60%;
+  text-align: left;
+  margin: 0 0 0 5px;
+}
+.content.song nav {
+  margin-top: 40px;
+  display: flex;
+}
+.content.song nav a {
+  color: #000;
 }
 .content.song nav span:last-child {
   text-align: right;
