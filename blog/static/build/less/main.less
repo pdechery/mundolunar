@@ -71,7 +71,7 @@ body {
 	margin:  0 0 0 0;
 }
 
-// SBEG
+// BOTÃO SUBIR
 
 #up {
 	position: fixed;
@@ -96,7 +96,6 @@ section.content {
 	margin-bottom: 20px;
 	color: #000;
 	width: 100%;
-	// font-size: 1.2em;
 	line-height: 1.4em;
 	position: relative;
 	h2 {
@@ -133,9 +132,7 @@ section.content {
 		right: 20px;
 	}
 	ul#songs {
-		// list-style-type: none;
 		li {
-			// list-style: none;
 			a {
 				text-decoration: none;
 				&:hover {
@@ -143,6 +140,16 @@ section.content {
 				}
 			}
 		}
+	}
+}
+
+// NAVEGAÇÃO MÚSICAS
+
+.content.song nav {
+	display: flex;
+	span:last-child {
+		text-align: right;
+		flex-grow: 2;
 	}
 }
 

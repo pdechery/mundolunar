@@ -48,11 +48,3 @@ class SongPage(Page):
         FieldPanel('body', classname="full"),
         FieldPanel('song_id'),
     ]
-
-    def serve(self, request):
-        return JsonResponse({
-            'title': self.title,
-            'body': self.body,
-            'date': self.date,
-            'song_id':self.song_id
-        })

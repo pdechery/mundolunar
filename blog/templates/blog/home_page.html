@@ -1,4 +1,4 @@
-{% load wagtailcore_tags %}
+k{% load wagtailcore_tags %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -11,11 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <script src="{% static 'vendor/vue.global.js' %}" defer></script>
     <script src="{% static 'js/fetch_songs.js' %}" defer></script>
     <script src="{% static 'js/navigation.js' %}" defer></script>
 </head>
 <body>
-    <div id="up">ml</div>
+    <div id="up">m</div>
     <div id="main">
         
         <div class="cell index">
@@ -26,12 +27,15 @@
             <img src="{% static 'img/pic8.png' %}" alt="">
         </div>
 
+        <!-- MENU MÚSICAS -->
+
         <section class="content index">
             {% for post in page.get_children %}
                 {% if post.content_type.name == "song" %}
                 <ul id="songs">
                     <li>
-                        <a href="javascript:void(0)" data-name="{{ post.slug }}">{{ post.title }}</a>
+                        <!-- <a href="javascript:void(0)" data-name="{{ post.slug }}">{{ post.title }}</a> -->
+                        <a href="#" @click.prevent="fetchSong('{{post.slug}}')">{{ post.title }}</a>
                     </li>
                 </ul>
                 {% endif %}
@@ -41,8 +45,9 @@
             </a>
         </section>
 
+        <!-- TEXTO -->
+
         <section class="content sobre">
-            <!-- <h2>{{ sobre.title }}</h2> -->
             {{ sobre.textpage.body|richtext }}
             <a href="javascript:void(0)" class="close">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
@@ -55,13 +60,34 @@
         </div>
         <div class="cell no-margin green"></div>
 
+        <!-- MÚSICA INDIVIDUAL CLICADA NO MENU -->
+
         <section class="content song">
-            <h2></h2>
+            <h2>[[song.title]]</h2>
             <div></div>
             <a href="javascript:void(0)" class="close">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
+            <dl>
+                <dd>Música e letra</dd>
+                <dt>Pierre Dechery</dt>
+
+                <dd>Equipamentos e instrumentos utilizados</dd>
+                <dt>Ardour, Teclado MIDI, Guitarra</dt>
+
+                <dd>Clima da canção</dd>
+                <dt>Tenso, festivo</dt>
+
+                <dd>Data da gravação</dd>
+                <dt>02/22</dt>
+            </dl>
+            <nav>
+                <span class="anterior"><a href="#" @click.prevent="fetchSong([[song.anterior]])">< Anterior</a></span>
+                <span class="proxima"><a href="#" @click.prevent="fetchSong([[song.proxima]])">Próxima ></a></span>
+            </nav>
         </section>
+
+        <!-- MÚSICA DESTAQUE -->
 
         <section class="content song-destaque">
             <h2>{{ destaque.title }}</h2>
@@ -75,13 +101,7 @@
         <div class="cell blue"></div>
         <div class="cell no-margin blue"></div>
 
-        <section class="content songmenu">
-            <h2></h2>
-            <div></div>
-            <a href="javascript:void(0)" class="close">
-                <img src="{% static 'img/x_icon.svg' %}" alt="">
-            </a>
-        </section>
+        <!-- ÁREA ABANDONADA POR ENQUANTO (SEM ESTILO) -->
 
         <div class="cell"></div>
         <div class="cell blue"></div>

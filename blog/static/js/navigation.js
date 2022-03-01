@@ -9,7 +9,7 @@ const linkCells = document.querySelectorAll('.cell');
 const content = document.querySelectorAll('.content');
 const close = document.querySelectorAll('a.close');
 const contentAll = document.querySelectorAll('.content');
-const songIndex = document.querySelectorAll('.content.index a');
+//const songIndex = document.querySelectorAll('.content.index a');
 const up = document.querySelector("#up");
 
 // window.addEventListener('scroll', function(e) {
@@ -59,32 +59,7 @@ function showContent(name, song) {
 		behavior: 'smooth'
 	});
 
-	if(song) fetchSong(song);
-
 }
-
-/**
- * Menu de músicas
- * 
- * - Oculta todos os blocos de conteúdo
- * - Exibe o bloco da música selecionada
- * 
- */ 
-
-songIndex.forEach((el)=>{
-
-	el.addEventListener('click', (ev)=> {
-
-		ev.preventDefault();
-
-		// apagar todos os blocos
-		contentAll.forEach((el)=>el.style.display = "none");
-
-		showContent('song', el.dataset.name);
-	
-	})
-
-});
 
 /**
  * Navegação nos cards

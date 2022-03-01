@@ -116,6 +116,13 @@ section.content ul#songs li a {
 section.content ul#songs li a:hover {
   text-decoration: underline;
 }
+.content.song nav {
+  display: flex;
+}
+.content.song nav span:last-child {
+  text-align: right;
+  flex-grow: 2;
+}
 .cell:nth-of-type(2) {
   background: url('../img/bg-cell-0-1.png');
 }
