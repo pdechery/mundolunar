@@ -47,11 +47,15 @@ close.forEach((el)=>{
  * 
  */ 
 
-function showContent(name, song) {
+function showContent(name) {
 	
 	const contentArea = [...contentAll].filter((el)=>el.classList.contains(name))[0];
 	
-	contentArea.style.display = "block";
+	if(name != 'index') {
+		contentArea.style.display = "block";
+	} else {
+		contentArea.style.display = "flex";
+	}
 
 	window.scrollTo({
 		top: contentArea.offsetTop - 20,
@@ -77,15 +81,15 @@ linkCells.forEach((el)=>{
 		let offsetTop = el.parentNode.parentNode.offsetTop;
 
 		if(el.classList.contains('index')) {
-			showContent('index', null);
+			showContent('index');
 		}
 
 		if(el.classList.contains('song-destaque')) {
-			showContent('song-destaque', null);
+			showContent('song-destaque');
 		}
 
 		if(el.classList.contains('sobre')) {
-			showContent('sobre', null);
+			showContent('sobre');
 		}
 
 	});

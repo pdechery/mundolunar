@@ -114,10 +114,19 @@ section.content a.close {
   top: 20px;
   right: 20px;
 }
-section.content ul#songs li a {
+section.content.index {
+  display: flex;
+}
+section.content.index ul.songs {
+  flex-basis: 50%;
+}
+section.content.index ul.songs li {
+  padding: 0.3em 0;
+}
+section.content.index ul.songs li a {
   text-decoration: none;
 }
-section.content ul#songs li a:hover {
+section.content.index ul.songs li a:hover {
   text-decoration: underline;
 }
 .content dl {

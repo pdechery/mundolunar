@@ -21,6 +21,7 @@ class HomePage(Page):
 
         context['sobre'] = TextPage.objects.filter(slug='sobre').first()
         context['destaque'] = SongPage.objects.first()
+        context['songs'] = [song for song in self.get_children() if song.content_type.name == "song"]
         return context
 
 # Posts

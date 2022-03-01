@@ -30,15 +30,20 @@ k{% load wagtailcore_tags %}
         <!-- MENU MÚSICAS -->
 
         <section class="content index">
-            {% for post in page.get_children %}
-                {% if post.content_type.name == "song" %}
-                <ul id="songs">
-                    <li>
-                        <a href="#" @click.prevent="fetchSong('{{post.slug}}')">{{ post.title }}</a>
-                    </li>
-                </ul>
-                {% endif %}
+            <ul class="songs">
+            {% for song in songs|slice:"2:" %}
+                <li>
+                    <a href="#" @click.prevent="fetchSong('{{song.slug}}')">{{song.title}}</a>
+                </li>
             {% endfor %}
+            </ul>
+            <ul class="songs">
+            {% for song in songs|slice:":3" %}
+                <li>
+                    <a href="#" @click.prevent="fetchSong('{{song.slug}}')">{{song.title}}</a>
+                </li>
+            {% endfor %}
+            </ul>
             <a href="#" class="close">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
