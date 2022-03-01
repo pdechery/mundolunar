@@ -4,3 +4,4 @@ venv/
 static/
 !blog/static
 *sublime*
+*.sqlite3

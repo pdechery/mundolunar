@@ -96,9 +96,12 @@ section.content.song-destaque {
   color: #fff;
 }
 section.content.song {
-  background-color: #ada664;
+  background-color: #1a1a1a;
   color: #fff;
   padding-right: 40px;
+}
+section.content.song h2 {
+  color: #ada664;
 }
 section.content.songmenu {
   min-height: 700px;
@@ -142,7 +145,7 @@ section.content ul#songs li a:hover {
   display: flex;
 }
 .content.song nav a {
-  color: #000;
+  color: #ada664;
 }
 .content.song nav span:last-child {
   text-align: right;
