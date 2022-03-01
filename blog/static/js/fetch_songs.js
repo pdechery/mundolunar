@@ -25,6 +25,8 @@ Vue.createApp({
 	methods: {
 		fetchSong(slug){
 
+			if(slug == 0) return;
+
 			const songdiv = document.querySelector(".content.song");
 
 			if(songdiv.style.display != "block") {
@@ -82,8 +84,5 @@ Vue.createApp({
 				songdiv.querySelector('div').appendChild(SCWidget);
 			});
 		}
-	},
-	created() {
-		console.log('hi there Vue')
 	}
 }).mount('#main');
