@@ -15,14 +15,45 @@ Vue.createApp({
 				autoria: '',
 				equipamentos: '',
 				instrumentos: '',
-				clima: ''
-			}
+				clima: '',
+			},
+			contentAll: ''
 		}
 	},
 	compilerOptions: {
 		delimiters : ['[[', ']]']
 	},
 	methods: {
+		close(){
+			
+			this.contentAll.forEach((el)=>el.style.display = "none");
+
+			window.scrollTo({
+			  top: 0,
+			  left: 0,
+			  behavior: 'smooth'
+			});
+
+		},
+		navigate(name){
+
+			this.contentAll.forEach((el)=>el.style.display = "none");
+
+			const contentArea = [...this.contentAll].filter((el)=>el.classList.contains(name))[0];
+
+			if(name != 'index') {
+				contentArea.style.display = "block";
+			} else {
+				contentArea.style.display = "flex";
+			}
+
+			window.scrollTo({
+				top: contentArea.offsetTop - 20,
+				left: 0,
+				behavior: 'smooth'
+			});
+
+		},
 		fetchSong(slug){
 
 			if(slug == 0) return;
@@ -84,5 +115,8 @@ Vue.createApp({
 				songdiv.querySelector('div').appendChild(SCWidget);
 			});
 		}
+	},
+	mounted(){
+		this.contentAll = document.querySelectorAll('.content');
 	}
-}).mount('#main');
+}).mount('body');

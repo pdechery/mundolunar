@@ -13,17 +13,16 @@ k{% load wagtailcore_tags %}
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <script src="{% static 'vendor/vue.global.js' %}" defer></script>
     <script src="{% static 'js/fetch_songs.js' %}" defer></script>
-    <script src="{% static 'js/navigation.js' %}" defer></script>
 </head>
 <body>
-    <div id="up">m</div>
+    <div id="up" @click.prevent="close">m</div>
     <div id="main">
         
-        <div class="cell index">
+        <div class="cell index" @click.prevent="navigate('index')">
             <img src="{% static 'img/pic1.png' %}" alt="">
         </div>
         <div class="cell"></div>
-        <div class="cell sobre no-margin">
+        <div class="cell sobre no-margin" @click.prevent="navigate('sobre')">
             <img src="{% static 'img/pic8.png' %}" alt="">
         </div>
 
@@ -44,7 +43,7 @@ k{% load wagtailcore_tags %}
                 </li>
             {% endfor %}
             </ul>
-            <a href="#" class="close">
+            <a href="#" class="close" @click.prevent="close">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
         </section>
@@ -54,13 +53,13 @@ k{% load wagtailcore_tags %}
         <section class="content sobre">
             <h2>{{ sobre.specific.title }}</h2>
             {{ sobre.specific.body|richtext }}
-            <a href="javascript:void(0)" class="close">
+            <a href="#" class="close" @click.prevent="close">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
         </section>
         
         <div class="cell blue"></div>
-        <div class="cell song-destaque">
+        <div class="cell song-destaque" @click.prevent="navigate('song-destaque')">
             <img src="{% static 'img/pic4.png' %}" alt="">
         </div>
         <div class="cell no-margin green"></div>
@@ -94,7 +93,7 @@ k{% load wagtailcore_tags %}
                     <a href="#" :class="{ disabled: !song.proxima }" @click.prevent="fetchSong([[song.proxima]])">Próxima ></a>
                 </span>
             </nav>
-            <a href="javascript:void(0)" class="close">
+            <a href="#" class="close" @click.prevent="close()">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
         </section>
@@ -120,7 +119,7 @@ k{% load wagtailcore_tags %}
                 <dt>Data da gravação</dt>
                 <dd>{{destaque.specific.data_gravacao}}</dd>
             </dl>
-            <a href="javascript:void(0)" class="close">
+            <a href="#" class="close" @click.prevent="close()">
                 <img src="{% static 'img/x_icon.svg' %}" alt="">
             </a>
         </section>
@@ -129,11 +128,19 @@ k{% load wagtailcore_tags %}
         <div class="cell blue"></div>
         <div class="cell no-margin blue"></div>
 
-        <!-- ÁREA ABANDONADA POR ENQUANTO (SEM ESTILO) -->
-
-        <div class="cell"></div>
-        <div class="cell blue"></div>
-        <div class="cell no-margin blue"></div>
+        <footer>
+            <div>
+                <h4>mundo lunar</h4>
+                <nav>
+                    <ul>
+                        <li><a href="#" @click.prevent="navigate('index')">index</a></li>
+                        <li><a href="#" @click.prevent="navigate('sobre')">sobre</a></li>
+                        <li><a href="#" @click.prevent="navigate('song-destaque')">01/22</a></li>
+                        <li><a href="https://soundcloud.com/pierre-dechery" target="_blank">soundcloud</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
     
     </div>
 
