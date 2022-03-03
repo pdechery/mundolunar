@@ -11,6 +11,7 @@
 
  @verde: #1c2810;
  @bege: #c7be6f;
+ @verde-link: #25430a;
  @branco-gelo: #d3d3d3;
  @azul-escuro: #030822;
  @dark-gray: #0a0a0a;
@@ -29,6 +30,7 @@
 
 body {
 	background: #000;
+	margin: 0;
 	.type();
 }
 
@@ -47,7 +49,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
-	padding-top: 20px;
+	padding-top: 40px;
 	.cell {
 		position: relative;
 		width: 300px;
@@ -190,7 +192,7 @@ section.content.index {
 .content.song nav {
 	margin-top: 40px;
 	a {
-		color: #25430a;
+		color: @verde-link;
 		&.disabled {
 			color: #eee;
 			text-decoration: none;
@@ -244,6 +246,7 @@ footer {
 		}
 		nav ul {
 			margin: 1em 0 0 0;
+			padding: 0;
 			list-style-type: none;
 			justify-content: center;
 			display: flex;

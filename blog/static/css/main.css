@@ -11,6 +11,7 @@
 }
 body {
   background: #000;
+  margin: 0;
   font-size: 16px;
   font-family: 'Merriweather', serif;
   line-height: 1.2em;
@@ -22,7 +23,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 #main .cell {
   position: relative;
@@ -199,6 +200,7 @@ footer div h4 {
 }
 footer div nav ul {
   margin: 1em 0 0 0;
+  padding: 0;
   list-style-type: none;
   justify-content: center;
   display: flex;
