@@ -1,6 +1,8 @@
 /**
  *  Scripts Mundo Lunar
  * 
+ * 	Janeiro 2022
+ * 
  */
 
 Vue.createApp({
@@ -17,7 +19,8 @@ Vue.createApp({
 				instrumentos: '',
 				clima: '',
 			},
-			contentAll: ''
+			contentAll: '',
+			songDiv: ''
 		}
 	},
 	compilerOptions: {
@@ -56,16 +59,14 @@ Vue.createApp({
 		},
 		fetchSong(slug){
 
-			if(slug == 0) return;
+			if(!slug) return;
 
-			const songdiv = document.querySelector(".content.song");
+			if(this.songDiv.style.display != "block") {
 
-			if(songdiv.style.display != "block") {
-
-				songdiv.style.display = "block";
+				this.songDiv.style.display = "block";
 
 				window.scrollTo({
-					top: songdiv.offsetTop - 20,
+					top: this.songDiv.offsetTop - 20,
 					left: 0,
 					behavior: 'smooth'
 				});
@@ -92,7 +93,7 @@ Vue.createApp({
 
 				// Soundcloud
 
-				songdiv.querySelector('div').innerHTML = '';
+				this.songDiv.querySelector('div').innerHTML = '';
 
 				const SCURl = "https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/";
 				const params = {
@@ -112,11 +113,12 @@ Vue.createApp({
 				SCWidget.setAttribute('width','100%');
 				SCWidget.setAttribute('height','300px');
 				SCWidget.setAttribute('src',encodeURI(SCURl)+this.song.soundcloud_id+"&"+SCParams);
-				songdiv.querySelector('div').appendChild(SCWidget);
+				this.songDiv.querySelector('div').appendChild(SCWidget);
 			});
 		}
 	},
 	mounted(){
 		this.contentAll = document.querySelectorAll('.content');
+		this.songDiv = document.querySelector(".content.song");
 	}
 }).mount('body');

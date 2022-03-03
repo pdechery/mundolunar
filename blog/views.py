@@ -14,9 +14,9 @@ def get_links(request, slug):
 	home_page = HomePage.objects.first()
 	song_list = [song.slug for song in home_page.get_children() if song.content_type.name == "song"]
 
-	slug_index = song_list.index(slug)
-	proximas = song_list[slug_index:]
-	anteriores = song_list[:slug_index]
+	index = song_list.index(slug)
+	proximas = song_list[index+1:]
+	anteriores = song_list[:index]
 
 	proxima = anterior = 0
 

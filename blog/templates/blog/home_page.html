@@ -1,6 +1,5 @@
-k{% load wagtailcore_tags %}
+{% load wagtailcore_tags %}
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,14 +29,14 @@ k{% load wagtailcore_tags %}
 
         <section class="content index">
             <ul class="songs">
-            {% for song in songs|slice:"2:" %}
+            {% for song in songs|slice:":3" %}
                 <li>
                     <a href="#" @click.prevent="fetchSong('{{song.slug}}')">{{song.title}}</a>
                 </li>
             {% endfor %}
             </ul>
             <ul class="songs">
-            {% for song in songs|slice:":3" %}
+            {% for song in songs|slice:"3:" %}
                 <li>
                     <a href="#" @click.prevent="fetchSong('{{song.slug}}')">{{song.title}}</a>
                 </li>
@@ -133,10 +132,9 @@ k{% load wagtailcore_tags %}
                 <h4>mundo lunar</h4>
                 <nav>
                     <ul>
-                        <li><a href="#" @click.prevent="navigate('index')">index</a></li>
-                        <li><a href="#" @click.prevent="navigate('sobre')">sobre</a></li>
-                        <li><a href="#" @click.prevent="navigate('song-destaque')">01/22</a></li>
-                        <li><a href="https://soundcloud.com/pierre-dechery" target="_blank">soundcloud</a></li>
+                        <li><a href="#" @click.prevent="navigate('index')">Index</a></li>
+                        <li><a href="#" @click.prevent="navigate('song-destaque')">{{destaque.title}}</a></li>
+                        <li><a href="https://soundcloud.com/pierre-dechery" target="_blank">Soundcloud</a></li>
                     </ul>
                 </nav>
             </div>
