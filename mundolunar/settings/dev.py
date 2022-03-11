@@ -12,7 +12,7 @@ DATABASES = {
         'CONN_MAX_AGE': 0,
         "ENGINE": 'django.db.backends.postgresql',
         'HOST': 'localhost',
-        'NAME': 'mundolunar',
+        'NAME': 'mundolunar2',
         'PASSWORD': 'postgres',
         'PORT': '5432',
         'USER': 'postgres'

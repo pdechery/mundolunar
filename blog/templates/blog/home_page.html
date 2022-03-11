@@ -42,9 +42,6 @@
                 </li>
             {% endfor %}
             </ul>
-            <a href="#" class="close" @click.prevent="close">
-                <img src="{% static 'img/x_icon.svg' %}" alt="">
-            </a>
         </section>
 
         <!-- TEXTO -->
@@ -52,9 +49,6 @@
         <section class="content sobre">
             <h2>{{ sobre.specific.title }}</h2>
             {{ sobre.specific.body|richtext }}
-            <a href="#" class="close" @click.prevent="close">
-                <img src="{% static 'img/x_icon.svg' %}" alt="">
-            </a>
         </section>
         
         <div class="cell blue"></div>
@@ -92,9 +86,6 @@
                     <a href="#" :class="{ disabled: !song.proxima }" @click.prevent="fetchSong([[song.proxima]])">Próxima ></a>
                 </span>
             </nav>
-            <a href="#" class="close" @click.prevent="close()">
-                <img src="{% static 'img/x_icon.svg' %}" alt="">
-            </a>
         </section>
 
         <!-- MÚSICA DESTAQUE -->
@@ -102,25 +93,6 @@
         <section class="content song-destaque">
             <h2>{{ destaque.title }}</h2>
             {{ destaque.specific.body|richtext }}
-            <dl>
-                <dt>Música e letra</dt>
-                <dd>{{destaque.specific.autoria}}</dd>
-
-                <dt>Softwares</dt>
-                <dd>{{destaque.specific.equipamentos}}</dd>
-
-                <dt>Instrumentos</dt>
-                <dd>{{destaque.specific.instrumentos}}</dd>
-
-                <dt>Clima da canção</dt>
-                <dd>{{destaque.specific.clima}}</dd>
-
-                <dt>Data da gravação</dt>
-                <dd>{{destaque.specific.data_gravacao}}</dd>
-            </dl>
-            <a href="#" class="close" @click.prevent="close()">
-                <img src="{% static 'img/x_icon.svg' %}" alt="">
-            </a>
         </section>
 
         <div class="cell"></div>

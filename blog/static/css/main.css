@@ -115,6 +115,11 @@ section.content a.close {
   top: 20px;
   right: 20px;
 }
+section.content.sobre {
+  height: 400px;
+  background-image: url('/static/img/studio.png');
+  background-size: cover;
+}
 section.content.index ul.songs {
   flex-basis: 50%;
 }

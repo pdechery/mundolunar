@@ -20,7 +20,7 @@ class HomePage(Page):
         context = super().get_context(request, *args, **kwargs)
 
         context['sobre'] = TextPage.objects.filter(slug='sobre').first()
-        context['destaque'] = SongPage.objects.first()
+        context['destaque'] = SongPage.objects.get(is_destaque=True)
         context['songs'] = [song for song in self.get_children() if song.content_type.name == "song"]
         return context
 
@@ -43,6 +43,7 @@ class SongPage(Page):
     data_gravacao = models.DateField("Data Gravação")
     body = RichTextField(null=True,blank=True) # pode ser usado pra letra
     soundcloud_id = models.IntegerField(null=True, blank=True)
+    is_destaque = models.BooleanField(default=False, verbose_name="Destaque")
 
     autoria = models.CharField(max_length=255, default="Pierre Dechery")
     equipamentos = models.CharField(max_length=255, null=True,blank=True)
@@ -57,4 +58,5 @@ class SongPage(Page):
         FieldPanel('equipamentos'),
         FieldPanel('instrumentos'),
         FieldPanel('clima'),
+        FieldPanel('is_destaque')
     ]
