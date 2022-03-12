@@ -1,1 +1,1 @@
-web: gunicorn mundolunar.wsgi --log-file -
+web: gunicorn mundolunar_proj.wsgi --log-file -
