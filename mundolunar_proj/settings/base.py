@@ -68,7 +68,7 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
-ROOT_URLCONF = 'mundolunar.urls'
+ROOT_URLCONF = 'mundolunar_proj.urls'
 
 TEMPLATES = [
     {
@@ -91,7 +91,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mundolunar.wsgi.application'
+WSGI_APPLICATION = 'mundolunar_proj.wsgi.application'
 
 
 # Password validation
@@ -166,3 +166,7 @@ WAGTAILSEARCH_BACKENDS = {
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+WAGTAILEMBEDS_RESPONSIVE_HTML = True
+
+

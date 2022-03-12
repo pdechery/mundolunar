@@ -61,7 +61,7 @@ Vue.createApp({
 
 			if(!slug) return;
 
-			if(this.songDiv.style.display != "block") {
+			if(this.songDiv.style.display != "block" || window.scrollY < 900) {
 
 				this.songDiv.style.display = "block";
 
