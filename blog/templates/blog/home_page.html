@@ -29,14 +29,14 @@
 
         <section class="content index">
             <ul class="songs">
-            {% for song in songs|slice:":3" %}
+            {% for song in songs|slice:":6" %}
                 <li>
                     <a href="#" @click.prevent="fetchSong('{{song.slug}}')">{{song.title}}</a>
                 </li>
             {% endfor %}
             </ul>
             <ul class="songs">
-            {% for song in songs|slice:"3:" %}
+            {% for song in songs|slice:"6:" %}
                 <li>
                     <a href="#" @click.prevent="fetchSong('{{song.slug}}')">{{song.title}}</a>
                 </li>
