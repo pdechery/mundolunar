@@ -3,9 +3,9 @@ from .base import *
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.mundolunar.art.br']
+ALLOWED_HOSTS = ['.mundolunar.art.br']
 
 DATABASES = {
     'default': {
