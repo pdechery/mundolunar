@@ -27,13 +27,14 @@ def get_links(request, slug):
 		anterior = anteriores[len(anteriores) - 1]
 
 	song = Page.objects.filter(slug=slug).first()
+	data = song.specific.data_gravacao
 
 	return JsonResponse({
 		'soundcloud_id': song.specific.soundcloud_id,
 		'title': song.title,
 		'proxima': proxima,
 		'anterior': anterior,
-		'data_gravacao':song.specific.data_gravacao,
+		'data_gravacao':data.strftime("%d/%m/%Y"),
 		'equipamentos':song.specific.equipamentos,
 		'instrumentos':song.specific.instrumentos,
 		'autoria':song.specific.autoria,
