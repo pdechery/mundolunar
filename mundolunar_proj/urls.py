@@ -12,7 +12,7 @@ urlpatterns = [
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
 
-    path('', include('blog.urls')),
+    path('', include('mundolunar.urls')),
 
     path('__debug__/', include('debug_toolbar.urls')),
 

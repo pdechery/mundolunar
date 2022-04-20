@@ -52,6 +52,8 @@ INSTALLED_APPS = [
 
     'debug_toolbar',
     'debugtools',
+
+    'django_rename_app'
 ]
 
 MIDDLEWARE = [
@@ -136,7 +138,7 @@ STATICFILES_FINDERS = [
 ]
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'blog', 'static'),
+    os.path.join(BASE_DIR, 'mundolunar', 'static'),
 )
 
 # ManifestStaticFilesStorage is recommended in production, to prevent outdated
