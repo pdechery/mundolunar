@@ -7,7 +7,7 @@ import wagtail.core.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0001_initial'),
+        ('mundolunar', '0001_initial'),
     ]
 
     operations = [
