@@ -51,9 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'debug_toolbar',
-    'debugtools',
-
-    'django_rename_app'
+    'debugtools'
 ]
 
 MIDDLEWARE = [
