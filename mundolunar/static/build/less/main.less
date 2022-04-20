@@ -1,0 +1,296 @@
+/**	
+ * Mundo Lunar
+ * 
+ * Estilos Novo Blog
+ * 
+ * Novembro 2021 ~ Pierre Dechery
+ * 
+ */
+
+ // CORES
+
+ @verde: #1c2810;
+ @bege: #c7be6f;
+ @verde-link: #25430a;
+ @branco-gelo: #d3d3d3;
+ @azul-escuro: #030822;
+ @dark-gray: #0a0a0a;
+
+.type() {
+	font-size: 16px;
+	font-family: 'Merriweather', serif;
+	line-height: 1.2em;
+	font-weight: 300;
+	color: #000;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #000;
+	margin: 0;
+	.type();
+}
+
+.overlay-cell() {
+	//display: none;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#main {
+	width: 942px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding-top: 40px;
+	.cell {
+		position: relative;
+		width: 300px;
+		height: 300px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		color: #fff;
+		&:before {
+			.overlay-cell();
+		}
+
+	}
+}
+
+.cell.index,
+.cell.sobre,
+.cell.song-destaque {
+	cursor: pointer;
+}
+
+.cell.index:hover::before,
+.cell.sobre:hover::before,
+.cell.song-destaque:hover::before, {
+	background-color: #000;
+	opacity: 0.35;
+}
+
+#main .no-margin {
+	margin:  0 0 0 0;
+}
+
+// BOTÃO SUBIR
+
+#up {
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #fff;
+	cursor: pointer;
+	display: flex;
+	color: #fff;
+	align-items: center;
+    justify-content: center;
+}
+
+// CONTEÚDO
+
+section.content {
+	display: none;
+	background-color: #ddd;
+	padding: 20px 80px 40px 40px;
+	margin-bottom: 20px;
+	color: #000;
+	width: 100%;
+	line-height: 1.4em;
+	position: relative;
+	h2 {
+		font-size: 1.2em;
+	}
+	a {
+		color: #fff;
+	}
+	&.index {
+		background-color: @azul-escuro;
+		color: #fff;
+	}
+	&.sobre {
+		background-color: @verde;
+		color: #fff;
+	}
+	&.song-destaque {
+		background-color: @bege;
+		color: #000;
+	}
+	&.song {
+		background-color: @branco-gelo;
+		color: #585858;
+		padding-right: 40px; // mudando padding para ficar bom com a navegação
+		h2 {
+			color: #585858;
+		}
+	}
+	&.songmenu {
+		min-height: 700px;
+	}
+	a.close {
+		display: block;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 20px;
+		right: 20px;
+	}
+}
+
+// ÁREA COM FOTO
+
+section.content.sobre {
+	height: 660px;
+	background-image: url('../img/studio.jpg');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+// MENU MÚSICAS
+
+section.content.index {
+	ul.songs {
+		flex-basis: 50%;
+		li {
+			padding: .3em 0;
+			a {
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+// FICA TÉCNICA MÚSICA
+
+.content dl {
+	display: flex;
+	flex-wrap: wrap;
+	width: 450px;
+	dt {
+		text-align: right;
+		font-weight: bold;
+		&:after {
+			content: ":";
+		}
+		margin: 0;
+	}
+	dd {
+		flex-grow: 2;
+		flex-shrink: 0;
+		flex-basis: 60%;
+		text-align: left;
+		margin: 0 0 0 5px;
+	}
+}
+
+// NAVEGAÇÃO MÚSICAS
+
+.content.song nav {
+	margin-top: 40px;
+	a {
+		color: @verde-link;
+		&.disabled {
+			color: #eee;
+			text-decoration: none;
+		}
+	}
+	display: flex;
+	span:last-child {
+		text-align: right;
+		flex-grow: 2;
+	}
+}
+
+// CÉLULAS
+
+.cell:nth-of-type(2) {
+	background: url('../img/bg-cell-0-1.png');
+}
+.cell:nth-of-type(4) {
+	background: url('../img/bg-cell-1-0.png');
+}
+.cell:nth-of-type(6) {
+	background: url('../img/bg-cell-1-2.png');
+}
+.cell:nth-of-type(7) {
+	background: url('../img/bg-cell-2-0.png');
+}
+.cell:nth-of-type(8) {
+	background: url('../img/bg-cell-2-1.png');
+}
+.cell:nth-of-type(9) {
+	background: url('../img/bg-cell-2-2.png');
+}
+
+// EMBEDS RESPONSIVOS
+// https://docs.wagtail.org/en/stable/topics/writing_templates.html#responsive-embeds
+
+.responsive-object {
+    position: relative;
+}
+
+.responsive-object iframe,
+.responsive-object object,
+.responsive-object embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// FOOTER
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 20px;
+	color: #fff;
+	text-align: center;
+	div {
+		flex-basis: 100%;
+		flex-shrink: 0;
+		h4 {
+			margin: 0;
+		}
+		nav ul {
+			margin: 1em 0 0 0;
+			padding: 0;
+			list-style-type: none;
+			justify-content: center;
+			display: flex;
+			li {
+				padding: 0 .8em;
+				border-right: 1px solid #fff;
+				&:last-child {
+					border-right: none;
+				}
+				a {
+					color: #fff;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
