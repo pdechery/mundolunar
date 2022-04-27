@@ -5,7 +5,7 @@ static/
 !mundolunar/static
 *sublime*
 *.sqlite3
-pg-dumps/*
+pg-*/*
 *.sh
 heroku-helper.md
 runtime.txt
