@@ -9,4 +9,4 @@ pg-dumps/*
 *.sh
 heroku-helper.md
 runtime.txt
-mundolunar_proj/settings/
+.env
