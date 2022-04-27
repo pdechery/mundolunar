@@ -26,7 +26,7 @@ SECRET_KEY="%1-j2$a2g*(6a@+muw!axuwl4vsj*3+k6pin#1)3kl+rvllkeg"
 
 INSTALLED_APPS = [
 
-    'blog',
+    'mundolunar',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -52,6 +52,8 @@ INSTALLED_APPS = [
 
     'debug_toolbar',
     'debugtools',
+
+    'django_rename_app'
 ]
 
 MIDDLEWARE = [
@@ -136,7 +138,7 @@ STATICFILES_FINDERS = [
 ]
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'blog', 'static'),
+    os.path.join(BASE_DIR, 'mundolunar', 'static'),
 )
 
 # ManifestStaticFilesStorage is recommended in production, to prevent outdated

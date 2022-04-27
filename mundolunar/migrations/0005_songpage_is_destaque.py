@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('blog', '0004_alter_songpage_autoria_alter_songpage_data_gravacao'),
+        ('mundolunar', '0004_alter_songpage_autoria_alter_songpage_data_gravacao'),
     ]
 
     operations = [

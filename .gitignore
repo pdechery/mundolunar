@@ -2,7 +2,7 @@ node_modules/
 venv/
 *.pyc
 static/
-!blog/static
+!mundolunar/static
 *sublime*
 *.sqlite3
 pg-dumps/*

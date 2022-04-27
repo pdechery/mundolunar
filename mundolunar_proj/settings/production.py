@@ -3,7 +3,7 @@ from .base import *
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.mundolunar.art.br']
 
