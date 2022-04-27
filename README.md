@@ -10,7 +10,7 @@ As for the website's technical part, I did it with the [Wagtail Framework](https
 
 I the front-end I used [Vue.js](https://vuejs.org/) to fetch the songs' info as well as the Soundcloud player to allow for each of them to be played on the website itself.
 
-The design's also my own, and I've used Gimp as the main tool for layout creation.
+The design's also my own, and I've used Gimp as the main tool for layout creation. This project is my first attempt in doing design since the last ten years or so.
 
-In the last ten years or so this project was my first attempt to create designs.
+You can access it [here](https://www.mundolunar.art.br/). It's hosted on Heroku.
 
