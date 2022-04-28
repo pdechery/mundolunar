@@ -8,7 +8,7 @@ You're invited to access the website and of course hear the music in there. I ho
 
 As for the site's technical part, In the Backend I've used the [Wagtail Framework](https://wagtail.org/), which is a CMS built upon Django. I've tried it for the first time in this project and I've had pretty much liked it (great UI).
 
-I the Frontend I used [Vue.js](https://vuejs.org/) to fetch the songs' info as well as the Soundcloud player to allow for each of them to be played on the website itself.
+Im the Frontend I used [Vue.js](https://vuejs.org/) to fetch the songs' info as well as the Soundcloud player to allow for each of them to be played on the website itself.
 
 The design's also my own, and I've used Gimp as the main tool for layout creation. This project is my first attempt of doing design in the last ten years or so.
 
