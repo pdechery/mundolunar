@@ -1,4 +1,4 @@
-## Mundo Lunares
+## Mundo Lunar
 
 This is an "album"-concept website. The goal is to promote my 12-song album project which is also called "Mundo Lunar".
 
