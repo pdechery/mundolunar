@@ -1,13 +1,13 @@
 ## The following requirements were added by pip freeze:
 anyascii==0.3.0
 asgiref==3.5.0
-backports.zoneinfo==0.2.1
+#backports.zoneinfo==0.2.1
 beautifulsoup4==4.9.3
 certifi==2021.10.8
 charset-normalizer==2.0.12
 click==6.6
 dj-database-url==0.4.1
-Django==4.0.2
+Django==3.2
 django-debug-toolbar==3.2.4
 django-debugtools==2.0
 django-filter==21.1
@@ -25,7 +25,7 @@ l18n==2021.3
 MarkupSafe==1.1.1
 openpyxl==3.0.9
 Pillow==9.0.1
-psycopg2==2.8.6
+psycopg2-binary==2.8.6
 python-decouple==3.6
 python-dotenv==0.6.1
 pytz==2021.3
