@@ -1,5 +1,7 @@
 node_modules/
 venv/
+pg-data
+pg-dumps
 *.pyc
 static/
 !mundolunar/static
