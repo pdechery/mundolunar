@@ -1,29 +1,22 @@
+from decouple import config
+import dj_database_url
+from dj_database_url import parse as db_url
 from .base import *
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'sqlite': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    'default': {
-        'CONN_MAX_AGE': 0,
-        "ENGINE": 'django.db.backends.postgresql',
-        'HOST': 'localhost',
-        'NAME': 'mundolunar2',
-        'PASSWORD': 'postgres',
-        'PORT': '5432',
-        'USER': 'postgres'
-    }
+DATABASES = {}
+
+DATABASES['sqlite'] = {
+    'ENGINE': 'django.db.backends.sqlite3',
+    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 }
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DATABASES['default'] = config('DATABASE_URL',cast=db_url)
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&clhlnl+ku92c&#in-4f(z$u)+pt%(byc(lvd0c6a2h%sjw(p%'
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = config('DEBUG', True)
 
 # SECURITY WARNING: define the correct hosts in production!
 ALLOWED_HOSTS = ['*'] 
