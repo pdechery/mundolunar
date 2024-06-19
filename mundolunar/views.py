@@ -1,4 +1,4 @@
-from wagtail.core.models import Page
+from wagtail.models import Page
 from .models import HomePage
 from django.shortcuts import render
 from django.http import JsonResponse
