@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'wagtail.images',
     'wagtail.search',
     'wagtail.admin',
-    'wagtail.core',
+    'wagtail',
 
     'modelcluster',
     'taggit',
@@ -156,6 +156,7 @@ MEDIA_URL = '/media/'
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "mundolunar"
+WAGTAILADMIN_BASE_URL = "http://127.0.0.1:8000/admin"
 
 # Search
 # https://docs.wagtail.org/en/stable/topics/search/backends.html
