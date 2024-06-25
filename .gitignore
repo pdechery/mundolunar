@@ -1,14 +1,27 @@
 node_modules/
+
+# Backup DB container
 pg-data/
 pg-dumps/
+
+# Python Venv
 venv/
 *.pyc
+
+# Django static files
 static/
 !mundolunar/static
+
 *sublime*
 *.sqlite3
-pg-*/*
-*.sh
-heroku-helper.md
-runtime.txt
+
+# env data
 .env
+
+# Random commands
+.helper
+
+# Terraform
+terraform/.terraform/
+terraform/docker-compose.yml
+*.tfstate*
