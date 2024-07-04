@@ -12,3 +12,5 @@ Im the Frontend I used [Vue.js](https://vuejs.org/) to fetch the songs' info as 
 
 The design's also my own, and I've used Gimp as the main tool for layout creation. This project is my first attempt of doing design in the last ten years or so.
 
+It's currently hosted in an AWS EC2 instance and you can access it [here](https://mundolunar.org)
+
