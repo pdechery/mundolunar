@@ -109,7 +109,7 @@ Vue.createApp({
 				const SCParams = new URLSearchParams(params);
 				const SCWidget = document.createElement("iframe");
 				SCWidget.setAttribute('allow','autoplay');
-				SCWidget.setAttribute('frameborder','no')
+				SCWidget.setAttribute('frameborder','no');
 				SCWidget.setAttribute('width','100%');
 				SCWidget.setAttribute('height','300px');
 				SCWidget.setAttribute('src',encodeURI(SCURl)+this.song.soundcloud_id+"&"+SCParams);

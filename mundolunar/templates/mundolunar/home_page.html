@@ -18,11 +18,11 @@
     <div id="main">
         
         <div class="cell index" @click.prevent="navigate('index')">
-            <img src="{% static 'img/pic1_b.png' %}" alt="">
+            <img src="{% static 'img/pic13.png' %}" alt="">
         </div>
         <div class="cell"></div>
         <div class="cell sobre no-margin" @click.prevent="navigate('sobre')">
-            <img src="{% static 'img/pic14.png' %}" alt="">
+            <img src="{% static 'img/pic9.png' %}" alt="">
         </div>
 
         <!-- MENU MÚSICAS -->
@@ -62,30 +62,13 @@
         <section class="content song">
             <h2>[[song.title]]</h2>
             <div></div>
-            <dl>
-                <dt>Música e letra</dt>
-                <dd>[[song.autoria]]</dd>
-
-                <dt>Softwares</dt>
-                <dd>[[song.equipamentos]]</dd>
-
-                <dt>Instrumentos</dt>
-                <dd>[[song.instrumentos]]</dd>
-
-                <dt>Clima da canção</dt>
-                <dd>[[song.clima]]</dd>
-
-                <dt>Data da gravação</dt>
-                <dd>[[song.data_gravacao]]</dd>
-            </dl>
-            <nav>
-                <span class="anterior">
-                    <a href="#" :class="{ disabled: !song.anterior }" @click.prevent="fetchSong([[song.anterior]])">< Anterior</a>
-                </span>
-                <span class="proxima">
-                    <a href="#" :class="{ disabled: !song.proxima }" @click.prevent="fetchSong([[song.proxima]])">Próxima ></a>
-                </span>
-            </nav>
+            <ul id="songbox">
+                <li><span>Música e letra</span> [[song.autoria]]</li>
+                <template v-if="song.clima">
+                    <li><span>Sobre</span> [[song.clima]]</li>
+                </template>
+                <li><span>Data da gravação</span> [[song.data_gravacao]]</li>
+            </ul>
         </section>
 
         <!-- MÚSICA DESTAQUE -->

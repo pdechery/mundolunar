@@ -4,7 +4,7 @@
   "description": "Blog Musical",
   "main": "index.js",
   "scripts": {
-    "less": "less-watch-compiler --main-file main.less ./blog/static/build/less/ ./blog/static/css/"
+    "less": "less-watch-compiler --main-file main.less ./mundolunar/static/build/less/ ./mundolunar/static/css/"
   },
   "repository": {
     "type": "git",
