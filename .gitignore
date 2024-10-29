@@ -23,6 +23,7 @@ static/
 
 # Terraform
 terraform/.terraform/
+terraform/.terraform.lock.*
 terraform/docker-compose.yml
 *.tfstate*
 

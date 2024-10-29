@@ -69,6 +69,14 @@
                 </template>
                 <li><span>Data da gravação</span> [[song.data_gravacao]]</li>
             </ul>
+            <nav>
+                <span class="anterior">
+                    <a href="#" :class="{ disabled: !song.anterior }" @click.prevent="fetchSong([[song.anterior]])">< Anterior</a>
+                </span>
+                <span class="proxima">
+                    <a href="#" :class="{ disabled: !song.proxima }" @click.prevent="fetchSong([[song.proxima]])">Próxima ></a>
+                </span>
+            </nav>
         </section>
 
         <!-- MÚSICA DESTAQUE -->
