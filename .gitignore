@@ -29,3 +29,10 @@ terraform/docker-compose.yml
 
 # Docker compose Postgres
 docker-compose.yml
+
+# Environment Settings 
+manage.py
+mundolunar_proj/wsgi.py
+
+mundolunar/settings/dev.py
+mundolunar/settings/production.py
