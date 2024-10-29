@@ -34,5 +34,5 @@ docker-compose.yml
 manage.py
 mundolunar_proj/wsgi.py
 
-mundolunar/settings/dev.py
-mundolunar/settings/production.py
+mundolunar_proj/settings/dev.py
+mundolunar_proj/settings/production.py
