@@ -25,3 +25,6 @@ static/
 terraform/.terraform/
 terraform/docker-compose.yml
 *.tfstate*
+
+# Docker compose Postgres
+docker-compose.yml
