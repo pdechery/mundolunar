@@ -135,7 +135,6 @@ section.content.index ul.songs li a:hover {
   text-decoration: underline;
 }
 .content ul#songbox {
-  width: 650px;
   list-style-type: none;
   margin: 15px 0 0;
   padding: 0;
