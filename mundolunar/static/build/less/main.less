@@ -65,13 +65,13 @@ body {
 }
 
 .cell.index,
-.cell.sobre,
+.cell.room,
 .cell.song-destaque {
 	cursor: pointer;
 }
 
 .cell.index:hover::before,
-.cell.sobre:hover::before,
+.cell.room:hover::before,
 .cell.song-destaque:hover::before, {
 	background-color: #000;
 	opacity: 0.35;
@@ -119,8 +119,10 @@ section.content {
 		color: #fff;
 	}
 	&.sobre {
-		background-color: @verde;
+		padding: 40px 120px 40px 60px;
+		background-color: #131029;
 		color: #fff;
+		line-height: 1.8em;
 	}
 	&.song-destaque {
 		background-color: @bege;
@@ -149,7 +151,7 @@ section.content {
 
 // ÁREA COM FOTO
 
-section.content.sobre {
+section.content.room {
 	height: 660px;
 	background-image: url('../img/studio.jpg');
 	background-position: center;

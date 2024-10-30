@@ -20,6 +20,7 @@ class HomePage(Page):
         context = super().get_context(request, *args, **kwargs)
 
         context['sobre'] = TextPage.objects.filter(slug='sobre').first()
+        context['room'] = TextPage.objects.filter(slug='room').first()
         context['destaque'] = SongPage.objects.get(is_destaque=True)
         context['songs'] = [song for song in self.get_children() if song.content_type.name == "song"]
         return context

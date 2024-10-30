@@ -42,12 +42,12 @@ body {
   height: 100%;
 }
 .cell.index,
-.cell.sobre,
+.cell.room,
 .cell.song-destaque {
   cursor: pointer;
 }
 .cell.index:hover::before,
-.cell.sobre:hover::before,
+.cell.room:hover::before,
 .cell.song-destaque:hover::before {
   background-color: #000;
   opacity: 0.35;
@@ -89,8 +89,10 @@ section.content.index {
   color: #fff;
 }
 section.content.sobre {
-  background-color: #1c2810;
+  padding: 40px 120px 40px 60px;
+  background-color: #131029;
   color: #fff;
+  line-height: 1.8em;
 }
 section.content.song-destaque {
   background-color: #c7be6f;
@@ -115,7 +117,7 @@ section.content a.close {
   top: 20px;
   right: 20px;
 }
-section.content.sobre {
+section.content.room {
   height: 660px;
   background-image: url('../img/studio.jpg');
   background-position: center;
@@ -135,6 +137,7 @@ section.content.index ul.songs li a:hover {
   text-decoration: underline;
 }
 .content ul#songbox {
+  width: 650px;
   list-style-type: none;
   margin: 15px 0 0;
   padding: 0;

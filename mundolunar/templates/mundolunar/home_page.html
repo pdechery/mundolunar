@@ -21,7 +21,7 @@
             <img src="{% static 'img/pic13.png' %}" alt="">
         </div>
         <div class="cell"></div>
-        <div class="cell sobre no-margin" @click.prevent="navigate('sobre')">
+        <div class="cell room no-margin" @click.prevent="navigate('room')">
             <img src="{% static 'img/pic9.png' %}" alt="">
         </div>
 
@@ -45,6 +45,8 @@
         </section>
 
         <!-- TEXTO -->
+
+        <section class="content room"></section>
 
         <section class="content sobre">
             <h2>{{ sobre.specific.title }}</h2>
@@ -98,6 +100,7 @@
                         <li><a href="#" @click.prevent="navigate('index')">index</a></li>
                         <li><a href="#" @click.prevent="navigate('song-destaque')">{{destaque.title}}</a></li>
                         <li><a href="https://soundcloud.com/pierre-dechery" target="_blank">soundcloud</a></li>
+                        <li><a href="#" @click.prevent="navigate('sobre')">sobre</a></li>
                     </ul>
                 </nav>
             </div>
