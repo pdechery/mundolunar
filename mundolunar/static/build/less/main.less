@@ -176,24 +176,20 @@ section.content.index {
 
 // FICA TÉCNICA MÚSICA
 
-.content dl {
-	display: flex;
-	flex-wrap: wrap;
-	width: 450px;
-	dt {
-		text-align: right;
-		font-weight: bold;
-		&:after {
-			content: ":";
+.content ul#songbox {
+	width: 650px;
+	list-style-type: none;
+	margin: 15px 0 0;
+	padding: 0;
+	li {
+		margin: 0 0 5px;
+		padding: 0;
+		span {
+			font-weight: bold;
+			&:after {
+				content: ":";
+			}
 		}
-		margin: 0;
-	}
-	dd {
-		flex-grow: 2;
-		flex-shrink: 0;
-		flex-basis: 60%;
-		text-align: left;
-		margin: 0 0 0 5px;
 	}
 }
 

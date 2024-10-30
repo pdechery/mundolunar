@@ -1,14 +1,40 @@
 node_modules/
+
+# Backup DB container
+pg-data/
+pg-dumps/
+
+# Python Venv
 venv/
 pg-data
 pg-dumps
 *.pyc
+
+# Django static files
 static/
 !mundolunar/static
+
 *sublime*
 *.sqlite3
-pg-*/*
-*.sh
-heroku-helper.md
-runtime.txt
+
+# env data
 .env
+
+# Random commands
+.helper
+
+# Terraform
+terraform/.terraform/
+terraform/.terraform.lock.*
+terraform/docker-compose.yml
+*.tfstate*
+
+# Docker compose Postgres
+docker-compose.yml
+
+# Environment Settings 
+manage.py
+mundolunar_proj/wsgi.py
+
+mundolunar_proj/settings/dev.py
+mundolunar_proj/settings/production.py
