@@ -38,3 +38,8 @@ mundolunar_proj/wsgi.py
 
 mundolunar_proj/settings/dev.py
 mundolunar_proj/settings/production.py
+
+# Jekyll Blog
+
+docs/_site
+docs/_jekyll_cache
