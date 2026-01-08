@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SQL Alchemy, Python e Bares | Mundo Lunar</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="SQL Alchemy, Python e Bares" />
+<meta name="author" content="Pierre" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Resolvi finalmente estudar um pouco mais a fundo o SQL Alchemy, o famoso pacote do Python que possibilita a integração do Python com diversos Bancos de Dados relacionais." />
+<meta property="og:description" content="Resolvi finalmente estudar um pouco mais a fundo o SQL Alchemy, o famoso pacote do Python que possibilita a integração do Python com diversos Bancos de Dados relacionais." />
+<link rel="canonical" href="http://0.0.0.0:4000/2025/06/01/sqlalchemy.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/2025/06/01/sqlalchemy.html" />
+<meta property="og:site_name" content="Mundo Lunar" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SQL Alchemy, Python e Bares" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Pierre"},"dateModified":"2025-06-01T00:00:00+00:00","datePublished":"2025-06-01T00:00:00+00:00","description":"Resolvi finalmente estudar um pouco mais a fundo o SQL Alchemy, o famoso pacote do Python que possibilita a integração do Python com diversos Bancos de Dados relacionais.","headline":"SQL Alchemy, Python e Bares","mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/2025/06/01/sqlalchemy.html"},"url":"http://0.0.0.0:4000/2025/06/01/sqlalchemy.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Mundo Lunar" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Mundo Lunar</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about.html">Sobre mim</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">SQL Alchemy, Python e Bares</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-06-01T00:00:00+00:00" itemprop="datePublished">Jun 1, 2025
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Pierre</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Resolvi finalmente estudar um pouco mais a fundo o <a href="https://www.sqlalchemy.org/">SQL Alchemy</a>, o famoso pacote do Python que possibilita a integração do Python com diversos Bancos de Dados relacionais.</p>
+
+<p>Pensando em algo que pudesse tornar o estudo mais interessante, resolvi criar um app sobre um assunto bastante comum no cotidiano: contas de clientes em bares.</p>
+
+<p>O que tornou tudo isso interessante pra mim foi descobrir como representar essas coisas num banco de dados utilizando a dobradinha Python/SQL Alchemy.</p>
+
+<h2 id="bares-clientes-e-contas">Bares, Clientes e Contas</h2>
+
+<p>Contas e Bares seria mais simples, um caso clássico de “Many To Many”: Clientes podem ter múltiplos Bares e Bares podem ter múltiplos Clientes.</p>
+
+<p>Mas e as Contas?</p>
+
+<p>Uma conta não é um atributo de um Cliente nem de um Bar, ela só existe quando há uma relação entre os dois.</p>
+
+<p>O diagrama das tabelas desse Banco de dados portanto teria que ficar algo assim:</p>
+
+<p><img src="/assets/img/erd.png" alt="Gráfico ERP" /></p>
+
+<p>Como se vê, Clientes (CLIENT) e Bares (BAR) podem se associar múltiplas vezes e nos dois sentidos. As Contas por sua vez, precisariam ficar na tabela aonde a associação é feita, a Tabela Pivô (BILLS).</p>
+
+<p>Felizmente, o SQL Alchemy <a href="https://docs.sqlalchemy.org/en/20/orm/basic_relationships.html#association-object">prevê esse caso</a> na documentação. Faltava então partir para a implementação.</p>
+
+<h2 id="many-to-many-turbinado">Many To Many turbinado</h2>
+
+<p>Quando trabalhamos com uma ORM é necessário criar classes que serão “mapeadas” com tabelas num banco de dados. Cada propriedade da classe será uma coluna da respectiva tabela.</p>
+
+<p>Uma classe nesse contexto passa a ser chamada “modelo”.</p>
+
+<p>Numa relação “Many To Many” tradicional, os modelos <code class="language-plaintext highlighter-rouge">Client</code> e <code class="language-plaintext highlighter-rouge">Bar</code> seriam suficientes. Mas aqui teremos que criar o também modelo <code class="language-plaintext highlighter-rouge">Bills</code>, pois o valor da conta ficará nele.</p>
+
+<p>O código então ficará assim:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy import ForeignKey, String
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
+from typing import List
+
+class Base(DeclarativeBase):
+    pass
+
+class Client(Base): 
+    __tablename__ = "client"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(30), unique=True)
+ 
+class Bar(Base):
+    __tablename__ = "bar"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(60), unique=True)
+
+class Bills(Base):
+    __tablename__ = "bills"
+    client_id: Mapped[int] = mapped_column(ForeignKey("client.id"), primary_key=True)
+    bar_id: Mapped[int] = mapped_column(ForeignKey("bar.id"), primary_key=True)
+    bill: Mapped[float]
+
+</code></pre></div></div>
+<p>Deixando de lado os elementos específicos do SQL Alchemy por enquanto, vemos que o código acima define três modelos, que são:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Client</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Bar</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Bills</code></li>
+</ul>
+
+<p>As propriedades de <code class="language-plaintext highlighter-rouge">Client</code> e <code class="language-plaintext highlighter-rouge">Bar</code> são simplemente o nome (<code class="language-plaintext highlighter-rouge">name</code>) e o <code class="language-plaintext highlighter-rouge">id</code>, que também é a chave primária. Já <code class="language-plaintext highlighter-rouge">Bills</code>, que será a Tabela Pivô, possui as chaves estrangeiras de <code class="language-plaintext highlighter-rouge">Client</code> e <code class="language-plaintext highlighter-rouge">Bar</code> e também a propriedade <code class="language-plaintext highlighter-rouge">bill</code>, que é justamente o valor da conta, como falamos acima.</p>
+
+<h2 id="destrinchando-a-api-do-sql-alchemy">Destrinchando a API do SQL Alchemy</h2>
+
+<p>O SQL Alchemy possui uma API extensa, onde há muitas formas de integrar o código Python com o Banco de Dados (até o uso da ORM é opcional). A opção adotada aqui é a considerada na documentação como a mais moderna, a “Declarative Mapping”.</p>
+
+<p>Essa é a razão de usarmos a classe <code class="language-plaintext highlighter-rouge">DeclarativeBase</code> como classe-pai dos nossos modelos, como mostrado acima:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Base(DeclarativeBase):
+    pass
+</code></pre></div></div>
+
+<p>Basicamente o “Declarative Mapping” prevê que para definir as colunas das nossas tabelas é necessário seguir o seguinte padrão:</p>
+
+<p><code class="language-plaintext highlighter-rouge">{NOME DA COLUNA}: Mapped[{TIPO DA COLUNA}] = mapped_column({DEMAIS PROPRIEDADES DA COLUNA})</code></p>
+
+<p>Este padrão espera que as informações sobre cada coluna de uma tabela sejam passadas em dois lugares distintos e complementares. No canto esquerdo, através do <em>annotation</em> <code class="language-plaintext highlighter-rouge">Mapped</code> e no canto direto através da função <code class="language-plaintext highlighter-rouge">mapped_column()</code>.</p>
+
+<p>Na <a href="https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html#orm-declarative-mapping">documentação oficial</a> da biblioteca você pode aprender mais sobre esta API.</p>
+
+<blockquote>
+  <p>O <em>annotation</em> <code class="language-plaintext highlighter-rouge">Mapped</code> pode despertar curiosidade naqueles que não estão tão habituados com o uso de tipos no Python. Para quem quiser se aprofundar um pouco mais no assunto, a documentação do SQL Alchemy <a href="https://docs.sqlalchemy.org/en/20/orm/mapping_styles.html#orm-mapping-styles">também oferece conteúdo detalhado</a>.</p>
+</blockquote>
+
+<p>O que nos interessa aqui, no entanto, é entender como o SQL Alchemy vai resolver os relacionamentos entre as entidades e como podemos trabalhar com elas no nosso código.</p>
+
+<h2 id="populando-os-relacionamentos">Populando os relacionamentos</h2>
+
+<p>Olhando o modelo <code class="language-plaintext highlighter-rouge">Bills</code>, podemos ver os relacionamentos entre bares e clientes declarados.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>client_id: Mapped[int] = mapped_column(ForeignKey("client.id"), primary_key=True)
+bar_id: Mapped[int] = mapped_column(ForeignKey("bar.id"), primary_key=True)
+</code></pre></div></div>
+
+<p>Como num “Many To Many” tradicional, esta é a nossa Tabela Pivô e vai portanto levar as chaves estrangeiras (<code class="language-plaintext highlighter-rouge">ForeignKey</code>) de cada um.</p>
+
+<p>O SQL Alchemy também oferece a função <code class="language-plaintext highlighter-rouge">relationship()</code>, que se destina a propriedades da classe que não vão ser mapeadas no banco de dados, mas ajudarão na hora de trabalhar com os relacionamentos no código.</p>
+
+<p>Vamos ver como isso se dá na prática.</p>
+
+<p>Primeiro vamos reescrever nossos modelos adicionando alguns relacionamentos.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Client(Base): 
+    __tablename__ = "client"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(30), unique=True)
+    bills: Mapped[List["Bills"]] = relationship(back_populates="client")
+ 
+class Bar(Base):
+    __tablename__ = "bar"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(60), unique=True)
+    bills: Mapped[List["Bills"]] = relationship(back_populates="bar")
+
+class Bills(Base):
+    __tablename__ = "bills"
+    client_id: Mapped[int] = mapped_column(ForeignKey("client.id"), primary_key=True)
+    bar_id: Mapped[int] = mapped_column(ForeignKey("bar.id"), primary_key=True)
+    bill: Mapped[float]
+    bar: Mapped["Bar"] = relationship(back_populates="bills")
+    client: Mapped["Client"] = relationship(back_populates="bills")
+</code></pre></div></div>
+
+<p>Adicionamos uma nova propriedade em <code class="language-plaintext highlighter-rouge">Client</code> e <code class="language-plaintext highlighter-rouge">Bar</code> chamada <code class="language-plaintext highlighter-rouge">bills</code>, que tem como valor o <code class="language-plaintext highlighter-rouge">relationship()</code>. Repare que em ambos o annotation <code class="language-plaintext highlighter-rouge">Mapped</code> declara o modelo com o qual estamos criando o relacionamento (<code class="language-plaintext highlighter-rouge">Bills</code>) - em ambos casos como lista (<code class="language-plaintext highlighter-rouge">Mapped[List["Bills"]]</code>). Isto já indica que o tipo de relação será “One To Many”.</p>
+
+<p>Já em <code class="language-plaintext highlighter-rouge">Bills</code> incluímos duas propriedades, <code class="language-plaintext highlighter-rouge">bar</code> e <code class="language-plaintext highlighter-rouge">client</code>, que criam a relação com os modelos <code class="language-plaintext highlighter-rouge">Bar</code> e <code class="language-plaintext highlighter-rouge">Client</code>, respectivamente - mas aqui como unidade (<code class="language-plaintext highlighter-rouge">Mapped["Bar"]</code> e <code class="language-plaintext highlighter-rouge">Mapped["Client"]</code>).</p>
+
+<p>Basicamente, essas novas propriedades nos permitirão trabalhar com os relacionamentos (criando, apagando etc) diretamente no código de modo muito simples.</p>
+
+<h2 id="criando-e-relacionando-instâncias">Criando e relacionando instâncias</h2>
+
+<p>Vamos partir então finalmente para um exemplo de criação de um Cliente que tenha uma Conta em um Bar, agora que temos todos os modelos - <code class="language-plaintext highlighter-rouge">Client</code>, <code class="language-plaintext highlighter-rouge">Bar</code> e <code class="language-plaintext highlighter-rouge">Bills</code> - devidamente criados e configurados.</p>
+
+<blockquote>
+  <p>Os exemplos em código dados aqui não necessitam de um banco de dados e podem ser testados com a ajuda do Python em seu terminal.</p>
+</blockquote>
+
+<p>Primeiro vamos criar um Cliente e uma Conta.</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="o">&gt;&gt;</span> cliente <span class="o">=</span> Client<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s2">"Amigo do Zé"</span><span class="o">)</span>
+<span class="gp">&gt;</span><span class="o">&gt;&gt;</span> conta <span class="o">=</span> Bills<span class="o">(</span><span class="nv">bill</span><span class="o">=</span>20.5<span class="o">)</span>
+</code></pre></div></div>
+
+<p>Agora vamos relacionar esta Conta ao cliente Criado.</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="o">&gt;&gt;</span> cliente.bills.append<span class="o">(</span>conta<span class="o">)</span>
+</code></pre></div></div>
+
+<p>Usamos aqui a propriedade <code class="language-plaintext highlighter-rouge">bills</code> no modelo <code class="language-plaintext highlighter-rouge">Client</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">bills: Mapped[List["Bills"]] = relationship(back_populates="client")</code></p>
+
+<p>Repare também que nesta propriedade temos o <em>annotation</em> <code class="language-plaintext highlighter-rouge">Mapped[List["Bills"]]</code>. Como falamos acima, isso significa que o Cliente possui uma <strong>lista</strong> de contas e por isso temos que usar o <em>append()</em> para inserir um novo relacionamento.</p>
+
+<p>Agora nosso Cliente possui uma lista de contas que podemos inspecionar como quisermos. Por exemplo:</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="o">&gt;&gt;</span> cliente.bills
+<span class="go">[Bills(bill=20.5)]
+</span></code></pre></div></div>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="o">&gt;&gt;</span> cliente.bills[0]
+<span class="go">Bills(bill=20.5)
+</span></code></pre></div></div>
+
+<p>ou</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="o">&gt;&gt;</span> cliente.bills[0].bill
+<span class="go">20.5
+</span></code></pre></div></div>
+
+<p>Vamos agora criar um Bar e adicioná-lo à Conta que acabamos de criar.</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="o">&gt;&gt;</span> bar <span class="o">=</span> Bar<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s2">"Bar do Zé"</span><span class="o">)</span>
+<span class="gp">&gt;</span><span class="o">&gt;&gt;</span> conta.bar <span class="o">=</span> bar
+</code></pre></div></div>
+
+<p>Repare que aqui não associamos o Bar diretamente ao Cliente, mas sim à Conta, que é a Tabela Pivô. Usamos a propriedade <code class="language-plaintext highlighter-rouge">bar</code> no modelo <code class="language-plaintext highlighter-rouge">Bills</code>, que cria um relacionamento com <code class="language-plaintext highlighter-rouge">Bar</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">bar: Mapped["Bar"] = relationship(back_populates="bills")</code></p>
+
+<p>Aqui, como o relacionamento é “One to One” podemos simplesmente setar o valor da propriedade “bar”.</p>
+
+<p>Agora vamos parar e pensar um pouco no que acabamos de fazer. Temos criadas uma instância de Cliente, uma de Conta e uma de Bar.</p>
+
+<p>Em seguida relacionamos a Conta ao Cliente e em seguida um Bar àquela Conta.</p>
+
+<p>Logo o Bar também está associado ao Cliente, não?</p>
+
+<p>Clientes não possuem Bares, mas Contas sim. E podemos ver os Clientes e Bares de uma Conta.</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="o">&gt;&gt;</span> conta.client
+<span class="go">Client(id=None, name='Amigo do Zé')
+</span></code></pre></div></div>
+
+<p>O Cliente está lá!</p>
+
+<p>Você pode estar se perguntando com a propriedade <code class="language-plaintext highlighter-rouge">client</code> foi atualizada sem que fizéssemos nada. A resposta é o <code class="language-plaintext highlighter-rouge">back_populates</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">bills: Mapped[List["Bills"]] = relationship(back_populates="client")</code></p>
+
+<p>Quando relacionamentos uma Conta a um Cliente o <code class="language-plaintext highlighter-rouge">back_populates</code> atualiza a propriedade <code class="language-plaintext highlighter-rouge">client</code> em <code class="language-plaintext highlighter-rouge">Bills</code>.</p>
+
+<p>Da mesma forma, quando adicionamos um Bar a uma Conta usamos a propriedade <code class="language-plaintext highlighter-rouge">bar</code> em <code class="language-plaintext highlighter-rouge">Bills</code>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">bar: Mapped["Bar"] = relationship(back_populates="bills")</code></p>
+
+<p>Aqui, o <code class="language-plaintext highlighter-rouge">back_populates</code> atualiza a propriedade <code class="language-plaintext highlighter-rouge">bills</code> em <code class="language-plaintext highlighter-rouge">Bar</code>. Vamos testar:</p>
+
+<div class="language-shell-session highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">&gt;</span><span class="o">&gt;&gt;</span> bar.bills
+<span class="go">[Bills(bill=20.5)]
+</span></code></pre></div></div>
+
+<p>Aí está! Legal, não é?</p>
+
+<p>Se está parecendo um pouco confuso à primeira vista, recomendo abrir um terminal do Python, importar os Modelos criados aqui e testar todas as propriedades.</p>
+
+<p>https://www.reddit.com/r/webdev/comments/1bsi9eq/best_place_for_devs_to_post_blogs/</p>
+
+
+  </div><a class="u-url" href="/2025/06/01/sqlalchemy.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <!-- <h2 class="footer-heading">Mundo Lunar</h2> -->
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p>Python, música e o que der na minha cabeça.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
