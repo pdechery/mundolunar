@@ -20,7 +20,7 @@ Uma conta não é um atributo de um Cliente nem de um Bar, ela só existe quando
 
 O diagrama das tabelas desse Banco de dados portanto teria que ficar algo assim:
 
-![Gráfico ERP](/assets/img/erd.png)
+![Gráfico ERP]({{ '/assets/img/erd.png' | relative_url }})
 
 Como se vê, Clientes (CLIENT) e Bares (BAR) podem se associar múltiplas vezes e nos dois sentidos. As Contas por sua vez, precisariam ficar na tabela aonde a associação é feita, a Tabela Pivô (BILLS).
 
