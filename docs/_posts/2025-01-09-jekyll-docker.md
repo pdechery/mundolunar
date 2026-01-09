@@ -11,7 +11,9 @@ Pensei em ler mais sobre como o Github Pages funciona e lá conheci o Jekyll, qu
 
 ## Jekyll
 
-O Jekyll é um projeto antigo - nem sei se ainda continua muito ativo - que gera sites estáticos a partir de HTML ou Markdown e também tem uma linguagem de template chamada "Liquid", que é similar ao que existe em frameworks como Django e Flask.
+O Jekyll é um projeto antigo - nem sei se ainda continua muito ativo - que gera "sites estáticos" a partir de Markdown e também tem uma linguagem de template chamada "Liquid", que é similar ao que existe em frameworks como Django e Flask.
+
+> "Sites estáticos" aqui significa apenas que, ao final do _build_, todos seus arquivos Markdown - além das variáveis do Liquid - serão convertidos em HTML puro, pronto pra ser servido. 
 
 Não pretendo detalhar muito aqui sobre o Jekyll em si, mas a [documentação é bem simples](https://jekyllrb.com/docs/) e em um ou dois dias acredito que um dev consiga trabalhar confortavelmente com ele.
 
@@ -100,7 +102,7 @@ Mas para aquilo que eu quero aconteça, ou seja, meus markdowns serem transforma
 bundle exec jekyll serve
 ```
 
-O `jekyll serve` faz o _build_ do site e inicia um servidor em Ruby para você visualizar as páginas em `localhost:4000`. 
+O `jekyll serve` faz o _build_ do site e inicia um servidor em Ruby para você visualizar as páginas em `{ip_do_container}:4000`. 
 
 Mas eu só posso rodar esse comando no container, certo?
 
@@ -122,7 +124,7 @@ services:
 ```
 Nada muito complicado e funcionou como esperado.
 
-Após rodar `docker compose up` o site estava disponível em "localhost:4000" e subitamente aquela minha pasta do blog agora tinha novos arquivos, produzidos pelo _build_ do Jekyll
+Após rodar `docker compose up` o site estava disponível em `{ip_do_container}:4000` e subitamente aquela minha pasta do blog agora tinha novos arquivos, produzidos pelo _build_ do Jekyll
 
 ```
 .
@@ -137,6 +139,7 @@ Após rodar `docker compose up` o site estava disponível em "localhost:4000" e 
 │   ├── 2025-01-09-jekyll-docker.md
 └── _site
     ├── 2025
+    │   └── 2025-01-09-jekyll-docker.html
     ├── about.html
     ├── feed.xml
     └── index.html
@@ -147,6 +150,6 @@ O Github Pages por sinal, possui o _build_ do Jekyll embutido e fará todo o pro
 
 ## Conclusão
 
-Com isso, espero ter ajudado a você ter tido seu primeiro contato com o Jekyll - caso não tenha - e também conhecer uma nova forma de usar o Docker para ajudar em seus pequenos ou grandes projetos pessoais.
+Com isso, espero ter ajudado a você ter tido seu primeiro contato com o Jekyll - caso não tivesse - e também conhecer uma nova forma de usar o Docker para ajudar em seus pequenos ou grandes projetos pessoais.
 
 

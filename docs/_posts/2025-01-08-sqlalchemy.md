@@ -87,7 +87,7 @@ class Base(DeclarativeBase):
 Basicamente a "Declarative Mapping" prevê que para definir as colunas das nossas tabelas é necessário seguir o seguinte padrão:
 
 ```python
-{NOME DA COLUNA}: Mapped[{TIPO DA COLUNA}] = mapped_column({DEMAIS PROPRIEDADES DA COLUNA})
+{nome_da_coluna}: Mapped[{tipo_da_coluna}] = mapped_column({outras_propriedades_da_coluna})
 ```
 
 Este padrão prevê que as informações sobre cada coluna de uma tabela sejam passadas em dois lugares distintos e complementares. No canto esquerdo, através do _annotation_ `Mapped` e no canto direto através da função `mapped_column()`. 

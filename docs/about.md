@@ -2,7 +2,7 @@
 layout: page
 title: Sobre mim
 ---
-Meu nome é Pierre Dechery. Sou um programador na ativa desde um tempinho aí. Minhas linguagens principais são Python e Javascript - quando aparece algo de front-end.
+Meu nome é Pierre Dechery. Sou um programador na ativa já faz alguns anos. Minhas linguagens principais são Python e Javascript - quando aparece algo de front-end.
 
 Sou muito interessado em Linux, já fiz curso de Linux Admin e estudei muito com livros também. Utilizo Debian faz alguns anos e, quando preciso trabalhar com Windows, uso o WSL.
 
