@@ -30,7 +30,7 @@ Felizmente, o SQL Alchemy [prevê esse caso](https://docs.sqlalchemy.org/en/20/o
 
 Quando trabalhamos com uma ORM é necessário criar classes que serão "mapeadas" com tabelas num banco de dados. Cada propriedade da classe será uma coluna da respectiva tabela. 
 
-Uma classe nesse contexto passa a ser chamada "modelo".
+Uma classe nessa situação passa a ser chamada "modelo".
 
 Numa relação "Many To Many" tradicional, os modelos `Client` e `Bar` seriam suficientes. Mas aqui teremos que criar o também modelo `Bills`, pois o valor da conta ficará nele.
 
@@ -73,7 +73,7 @@ As propriedades de `Client` e `Bar` são simplemente o nome (`name`) e o `id`, q
 
 ## Destrinchando a API do SQL Alchemy
 
-O SQL Alchemy possui uma API extensa, onde há muitas formas de integrar o código Python com o Banco de Dados (até o uso da ORM é opcional). A opção adotada aqui é a considerada na documentação como a mais moderna, a "Declarative Mapping". 
+O SQL Alchemy possui uma API extensa, onde há muitas formas de integrar o código Python com o Banco de Dados (até o uso da ORM é opcional). A opção adotada aqui é considerada na documentação como a mais atual, a chamada "Declarative Mapping". 
 
 Essa é a razão de usarmos a classe `DeclarativeBase` como classe-pai dos nossos modelos, como mostrado acima:
 
@@ -82,9 +82,11 @@ class Base(DeclarativeBase):
     pass
 ```
 
-Basicamente o "Declarative Mapping" prevê que para definir as colunas das nossas tabelas é necessário seguir o seguinte padrão:
+Basicamente a "Declarative Mapping" prevê que para definir as colunas das nossas tabelas é necessário seguir o seguinte padrão:
 
-`{NOME DA COLUNA}: Mapped[{TIPO DA COLUNA}] = mapped_column({DEMAIS PROPRIEDADES DA COLUNA})`
+```
+{NOME DA COLUNA}: Mapped[{TIPO DA COLUNA}] = mapped_column({DEMAIS PROPRIEDADES DA COLUNA})
+```
 
 Este padrão espera que as informações sobre cada coluna de uma tabela sejam passadas em dois lugares distintos e complementares. No canto esquerdo, através do _annotation_ `Mapped` e no canto direto através da função `mapped_column()`. 
 
@@ -160,7 +162,9 @@ Agora vamos relacionar esta Conta ao cliente Criado.
 
 Usamos aqui a propriedade `bills` no modelo `Client`: 
 
-`bills: Mapped[List["Bills"]] = relationship(back_populates="client")`
+```
+bills: Mapped[List["Bills"]] = relationship(back_populates="client")
+```
 
 Repare também que nesta propriedade temos o _annotation_ `Mapped[List["Bills"]]`. Como falamos acima, isso significa que o Cliente possui uma **lista** de contas e por isso temos que usar o _append()_ para inserir um novo relacionamento.
 
@@ -192,7 +196,9 @@ Vamos agora criar um Bar e adicioná-lo à Conta que acabamos de criar.
 
 Repare que aqui não associamos o Bar diretamente ao Cliente, mas sim à Conta, que é a Tabela Pivô. Usamos a propriedade `bar` no modelo `Bills`, que cria um relacionamento com `Bar`.
 
-`bar: Mapped["Bar"] = relationship(back_populates="bills")`
+```
+bar: Mapped["Bar"] = relationship(back_populates="bills")
+```
 
 Aqui, como o relacionamento é "One to One" podemos simplesmente setar o valor da propriedade "bar".
 
@@ -213,13 +219,17 @@ O Cliente está lá!
 
 Você pode estar se perguntando com a propriedade `client` foi atualizada sem que fizéssemos nada. A resposta é o `back_populates`:
 
-`bills: Mapped[List["Bills"]] = relationship(back_populates="client")`
+```
+bills: Mapped[List["Bills"]] = relationship(back_populates="client")
+```
 
 Quando relacionamentos uma Conta a um Cliente o `back_populates` atualiza a propriedade `client` em `Bills`.
 
 Da mesma forma, quando adicionamos um Bar a uma Conta usamos a propriedade `bar` em `Bills`:
 
-`bar: Mapped["Bar"] = relationship(back_populates="bills")`
+```
+bar: Mapped["Bar"] = relationship(back_populates="bills")
+```
 
 Aqui, o `back_populates` atualiza a propriedade `bills` em `Bar`. Vamos testar:
 
@@ -232,5 +242,5 @@ Aí está! Legal, não é?
 
 Se está parecendo um pouco confuso à primeira vista, recomendo abrir um terminal do Python, importar os Modelos criados aqui e testar todas as propriedades. 
 
-https://www.reddit.com/r/webdev/comments/1bsi9eq/best_place_for_devs_to_post_blogs/
+
 
