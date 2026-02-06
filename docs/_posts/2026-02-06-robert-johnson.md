@@ -18,7 +18,7 @@ Um americano descobridor de talentos chamado Don Law o descobriu e propôs um re
 
 Claro que há muito mais detalhes nesta história. Como sua misteriosa morte por whisky envenenado, aos 27 anos. Sobre seu suposto "pacto" com o "diabo", que lhe renderia habilidade no violão e fama, claro (esta história inclusive, bastante semelhante a uma passagem do nosso famoso romance Grande Sertão Veredas).
 
-Mas pra esse texto ficamos com as imagens. Pois recentemente (relativamente falando, em 2020), [uma nova foto de Robert foi encontrada](https://www.guitarworld.com/news/a-new-photo-of-robert-johnson-the-third-in-existence-has-been-uncovered) - o que motivou a escrita.
+Mas pra esse texto ficamos com as imagens. Pois recentemente (relativamente falando, em 2020), [uma nova foto de Robert foi encontrada](https://www.guitarworld.com/news/a-new-photo-of-robert-johnson-the-third-in-existence-has-been-uncovered) - o que motivou estas linhas.
 
 Até então, haviam duas fotos conhecidas de Robert - as duas primeiras à esquerda no alto do post. Nelas ficou eternizada a imagem do bluesman andarilho, elegante e de vida boêmia - sinalizada pelo malicioso cigarro no canto da boca. 
 
