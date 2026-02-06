@@ -29,4 +29,3 @@ Essa foto, de tão cândida, chega a contrastar com a música de Robert, cujos m
 Nós, que crescemos e vivemos num mundo de imagens, onde a facilidade em produzi-las e consumi-las é cada vez maior, corremos sempre o risco de perder o poder de encontrar significado nelas. 
 
 Aqui, portanto, eu proponho simplemente a contemplação dessas imagens, especialmente a última a direita. Se possível com a música de Robert ao fundo.
-
