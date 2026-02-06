@@ -6,11 +6,11 @@ title: Uma foto
 
 ![Robert Johnson]({{ '/assets/img/rjohnson.jpeg' | relative_url }})
 
-Ou melhor, três fotos.
+Ou melhor, três.
 
 Em plena era do Instagram é apenas isso que se tem de um dos maiores artistas da música ocidental, Robert Johnson.
 
-Robert Johnson, um jovem negro norte-americano que viveu nos anos 20 na região estadunidense chamada Delta do Mississipi ("o lugar mais sulista da Terra"). Ali, onde negros descendentes de escravos com ele viviam no meio de grandes plantações de algodão e o trabalho era duro, e a paga, muito pouca.
+Robert Johnson, um jovem negro norte-americano que viveu nos anos 20 na região estadunidense chamada Delta do Mississipi (["o lugar mais sulista da face da Terra"](https://www.amazon.com/Most-Southern-Place-Earth-Mississippi/dp/0195089138)). Ali, onde negros descendentes de escravos com ele viviam no meio de grandes plantações de algodão e o trabalho era duro, e a paga, muito pouca.
 
 Mas Robert nunca quis saber de lavoura. Seu talento no violão logo se manifestou e na estrada ele se lançou, pra fazer história.
 
@@ -28,4 +28,4 @@ Essa foto, de tão cândida, chega a contrastar com a música de Robert, cujos m
 
 Nós, que crescemos e vivemos num mundo de imagens, onde a facilidade em produzi-las e consumi-las é cada vez maior, corremos sempre o risco de perder o poder de encontrar significado nelas. 
 
-Aqui, portanto, eu proponho simplemente a contemplação dessas imagens, especialmente a última a direita. Se possível com a música de Robert ao fundo.
+Aqui, portanto, eu proponho simplemente a contemplação dessas imagens, especialmente a última a direita. Se possível com a música de Robert Johnson ao fundo.
