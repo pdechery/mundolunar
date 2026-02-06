@@ -6,7 +6,7 @@ title: Uma foto
 
 ![Robert Johnson]({{ '/assets/img/rjohnson.jpeg' | relative_url }})
 
-Três fotos.
+Ou melhor, três fotos.
 
 Em plena era do Instagram é apenas isso que se tem de um dos maiores artistas da música ocidental, Robert Johnson.
 
