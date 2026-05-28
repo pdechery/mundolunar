@@ -1,6 +1,6 @@
 services:
   jekyll:
-    image: blog:3
+    image: blog:1.0
     volumes:
      - .:/home/pdechery/blog
     ports:
